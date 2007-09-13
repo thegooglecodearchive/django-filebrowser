@@ -1,13 +1,25 @@
-#summary One-sentence summary of this page.
+  # Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
+  # Copy the folder /media to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/)
+  # Copy /templates to your admin template-directory (cp -R /path/to/filebrowser/templates/filebrowser /path/to/your/admin/templates/)
+  # Change fb_settings.py
+  # Change your urls.py, add the following lines BEFORE the admin-urls:
+{{{
+(r'^admin/filebrowser/', include('filebrowser.urls')),
+}}}
+  # Add the !FileBrowser to your Admin Indexpage (/templates/admin/index.html). Add this code BEFORE {% for app in app_list %} ... {% endfor %}:
+{{{
+<div class="module">
+    <table>
+        <caption>File-Browser</caption>
+        <tr class="row2">
+            <th scope="row"><a href="filebrowser/">File-Browser</a></th>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
+</div>
+}}}
+  # That's it.
 
-= Introduction =
-
-Add your content here.
 
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
