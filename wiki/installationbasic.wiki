@@ -1,3 +1,4 @@
+#labels Featured
 =Basic Installation=
 
   # Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
