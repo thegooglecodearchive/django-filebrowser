@@ -1,3 +1,4 @@
+#labels Phase-Deploy
 =Using the !FileBrowseField=
 
 The !FileBrowseField (which is a !CharField with a specific help_text) makes selecting images easier and more comfortable compared with the given Image- or FileField - especially if you don't want to limit the selection to a directory.
@@ -21,6 +22,5 @@ The script !AddFileBrowser.js looks for the help_text "!FileBrowser." and adds a
 Additionally the script adds a preview-image when an image is selected with the !FileBrowser (see screenshots). The script !FileBrowserSelect.js is used by the FileBrowser to insert a selected preview-image.
 
 Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. You do get a no_thumb icon instead. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
-
 
 
