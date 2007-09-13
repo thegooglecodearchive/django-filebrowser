@@ -1,3 +1,4 @@
+#labels Featured
 =Using the !FileBrowser with TinyMCE=
 
 You can also replace the TinyMCE Image/File Manager with the !FileBrowser.
@@ -20,4 +21,3 @@ The template index.html already points to tiny_mce_popup_fb.js - you may want to
 {{{
 <script language="javascript" type="text/javascript" src="{% admin_media_prefix %}tinymce/jscripts/tiny_mce/tiny_mce_popup_fb.js"></script>
 }}}
-
