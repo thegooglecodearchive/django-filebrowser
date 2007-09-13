@@ -1,4 +1,4 @@
-=Using the !FileBrowser with !TinyMCE=
+=Using the !FileBrowser with TinyMCE=
 
 You can also replace the TinyMCE Image/File Manager with the !FileBrowser.
 What you have to do is a !FileBrowser Callback. There´s an example in /media/js/ called tinymceAdmin.js - you can copy the !FileBrowserCallback to your own file or take a look at http://www.rorlach.de/mediawiki/index.php/Custom_filebrowser.
@@ -20,5 +20,4 @@ The template index.html already points to tiny_mce_popup_fb.js - you may want to
 {{{
 <script language="javascript" type="text/javascript" src="{% admin_media_prefix %}tinymce/jscripts/tiny_mce/tiny_mce_popup_fb.js"></script>
 }}}
-
 
