@@ -1,3 +1,5 @@
+=Basic Installation=
+
   # Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
   # Copy the folder /media to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/)
   # Copy /templates to your admin template-directory (cp -R /path/to/filebrowser/templates/filebrowser /path/to/your/admin/templates/)
