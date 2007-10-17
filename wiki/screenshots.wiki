@@ -10,7 +10,7 @@
 [http://sehmaschine.net/media/filebrowser/fb_5.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_5.jpg]
 [http://sehmaschine.net/media/filebrowser/fb_6.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_6.jpg]
 
-== FileBrowser & TinyMCE ==
+== !FileBrowser & TinyMCE ==
 
 [http://sehmaschine.net/media/filebrowser/fb_7.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_7.jpg]
 [http://sehmaschine.net/media/filebrowser/fb_8.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_8.jpg]
