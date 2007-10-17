@@ -7,4 +7,4 @@ Add your content here.
 
 = Screenshots =
 
-http://sehmaschine.net/media/filebrowser/thumb_fb_1.jpg
+[http://sehmaschine.net/media/filebrowser/fb_1.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_1.jpg]
