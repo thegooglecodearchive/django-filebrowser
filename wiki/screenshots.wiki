@@ -5,8 +5,14 @@
 Add your content here.
 
 
-= Screenshots =
+== Basic Installation ==
 
 [http://sehmaschine.net/media/filebrowser/fb_1.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_1.jpg]
 [http://sehmaschine.net/media/filebrowser/fb_2.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_2.jpg]
 [http://sehmaschine.net/media/filebrowser/fb_3.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_3.jpg]
+
+== File-Browse Field ==
+
+[http://sehmaschine.net/media/filebrowser/fb_4.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_4.jpg]
+[http://sehmaschine.net/media/filebrowser/fb_5.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_5.jpg]
+[http://sehmaschine.net/media/filebrowser/fb_6.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_6.jpg]
