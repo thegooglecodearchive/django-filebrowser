@@ -12,12 +12,3 @@ js = (
     'js/custom/tinymce_admin.js',
 )
 }}}
-
-Hint: the script tiny_mce_popup.js is going to overwrite some Django CSS. In order to avoid this, just make a copy of tiny_mce_popup.js (e.g. tiny_mce_popup_fb.js) and delete line 80:
-{{{
-document.write('<link href="' + tinyMCE.getParam("popups_css") + '" rel="stylesheet" type="text/css">');
-}}}
-The template index.html already points to tiny_mce_popup_fb.js - you may want to change that line (line 24 of index.html), otherwise you get the error "TinyMCE is not defined":
-{{{
-<script language="javascript" type="text/javascript" src="{% admin_media_prefix %}tinymce/jscripts/tiny_mce/tiny_mce_popup_fb.js"></script>
-}}}
