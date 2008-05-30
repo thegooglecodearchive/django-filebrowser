@@ -7,7 +7,7 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
 }}}
   # Copy the folder /media to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/)
   # Copy /templates to your admin template-directory (cp -R /path/to/filebrowser/templates/filebrowser /path/to/your/admin/templates/)
-  # Change fb_settings.py
+  # Change fb_settings.py. Or better, overwrite the filebrowser settings in your project settings-file.
   # Change your urls.py, add the following lines BEFORE the admin-urls:
 {{{
 (r'^admin/filebrowser/', include('filebrowser.urls')),
@@ -26,4 +26,3 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
 </div>
 }}}
   # That's it.
-
