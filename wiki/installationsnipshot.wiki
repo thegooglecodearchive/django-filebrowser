@@ -1,4 +1,3 @@
-#labels Featured
 =Basic Image Editing with Snipshot=
 
 Snipshot is a simple online-based Image-Editor. There´s no fancy stuff, but it works quite well for basic image-editing.
