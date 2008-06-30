@@ -1,4 +1,3 @@
-#labels Featured
 =Advanced Image Editing with Picnik=
 
 Picnik is a more advanced online-based Image-Editor. For using Picnik, you have to request a key here.
@@ -7,4 +6,3 @@ Picnik is a more advanced online-based Image-Editor. For using Picnik, you have 
   # Set PICNIK_KEY in fb_settings.py 
 
 With using Picnik, you get two additional features in the !FileBrowser (compared with Snipshot): First, you are able to use "Picnik-Upload" for uploading a single image from your computer. Second, when editing an existing Image, Picnik lets you decide to overwrite the existing Image or save it with a new filename (the new filename is given by Picnik, so you may want to rename that file after uploading). 
-
