@@ -26,6 +26,6 @@ class PublicationAdmin(models.Model):
 
 Attributes for the !FileBrowseField:
   * *initial_directory*: Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field.
-  * *extensions_allowed*: List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. If you want to allow every possible file-extension, just remove "extensions" from your Models Field definition. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
+  * *extensions_allowed*: List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. *If you want to allow every possible file-extension, set extensions_allowed=""*. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
 
 Note: Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
