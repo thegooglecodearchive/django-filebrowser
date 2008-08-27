@@ -1,24 +1,31 @@
 #labels Featured
 =Using the !FileBrowseField=
 
-The !FileBrowseField (which is a !CharField with a specific help_text) makes selecting images easier and more comfortable compared with the given Image- or !FileField - especially if you don't want to limit the selection to a directory.
+*Note (2008-08-27): This has changed significantly with the current version of the !FileBrowser.*
+
+The !FileBrowseField makes selecting images/documents more comfortable compared with the given Image- or !FileField - especially if you don't want to limit the selection to a directory.
 
 Define your models like this:
 {{{
+from filebrowser.fields import FileBrowseField
+
 class Publication(models.Model):
-...
-    blog_image = models.CharField(help_text="FileBrowser: /images/blog/", blank=True, null=True)
-    sidebar_image = models.CharField(help_text="FileBrowser.", blank=True, null=True)
     ...
-    class Admin:
+    image = models.FileBrowseField(initial_directory="/media/uploads/images/blog/", extensions_allowed=['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], blank=True, null=True)
+    pdf = models.FileBrowseField(initial_directory="/media/uploads/documents/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
     ...
-        js = (
-            'js/getElementsBySelector.js',
-            'filebrowser/js/AddFileBrowser.js',
-        )
 }}}
-The script !AddFileBrowser.js looks for the help_text "!FileBrowser." and adds an Icon for opening the !FileBrowser in a new window. You may define an initial directory for each !FileBrowseField by adding a path to the help_text: Like "!FileBrowser: /images/blog/".
 
-Additionally the script adds a preview-image when an image is selected with the !FileBrowser (see screenshots). The script !FileBrowserSelect.js is used by the !FileBrowser to insert a selected preview-image.
+Add necessary javascripts to your !AdminModel:
+{{{
+class PublicationAdmin(models.Model):
+    ...
+    class Media:
+        js = ['/path/to/admin/media/filebrowser/js/AddFileBrowser.js']
+}}}
 
-Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. You do get a no_thumb icon instead. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
+Attributes for the !FileBrowseField:
+  * *initial_directory*: Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field.
+  * *extensions_allowed*: List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. If you want to allow every possible file-extension, just remove "extensions" from your Models Field definition. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
+
+Note: Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
