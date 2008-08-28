@@ -2,7 +2,7 @@
 
 = Settings =
 
-  * *URL_WWW*
+=== URL_WWW ===
   * The URL to your media-files.
   * Default: settings.MEDIA_URL + 'uploads/'
 
@@ -23,7 +23,8 @@
   * Default: /admin/
 
   * *PATH_TINYMCE*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *EXTENSIONS*
   * The URL to your Admin Index-Site.
