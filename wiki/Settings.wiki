@@ -3,13 +3,16 @@
 = Settings =
 
   * *URL_WWW*
-    xxx
+    The URL to your media-files:
+    Default: settings.MEDIA_URL + 'uploads/'
 
   * *URL_ADMIN*
-    xxx
+    The !FileBrowser Admin-URL.
+    Default: /admin/filebrowser/
 
   * *URL_HOME*
-    xxx
+    The URL to your Admin Index-Site.
+    Default: /admin/
 
   * *PATH_SERVER*
     xxx
@@ -43,4 +46,3 @@
 
   * *IMAGE_CROP_GENERATOR*
     xxx
-
