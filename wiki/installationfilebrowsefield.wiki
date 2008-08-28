@@ -5,7 +5,7 @@
 
 The !FileBrowseField makes selecting images/documents more comfortable compared with the given Image- or !FileField - especially if you don't want to limit the selection to a directory.
 
-Define your models like this:
+  # *Define your models like this*
 {{{
 from filebrowser.fields import FileBrowseField
 
@@ -15,18 +15,17 @@ class Publication(models.Model):
     pdf = models.FileBrowseField(initial_directory="/media/uploads/documents/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
     ...
 }}}
-
-Add necessary javascripts to your !AdminModel:
+  # *Add the !FileBrowser javascript to your !ModelAdmin*
 {{{
-class PublicationAdmin(models.Model):
+class PublicationAdmin(admin.ModelAdmin):
     ...
     class Media:
         js = ['/path/to/admin/media/filebrowser/js/AddFileBrowser.js']
 }}}
 
-Attributes for the !FileBrowseField:
+=== Attributes for the !FileBrowseField ===
   * *initial_directory*: Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field.
   * *extensions_allowed*: List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. *If you want to allow every possible file-extension, set extensions_allowed=""*. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
 
-Image Preview:
+=== Image Preview ===
 Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
