@@ -12,7 +12,7 @@ Django doesn´t serve media-files. This is done by Apache (or another webserver 
 ----
 *Where should I put the /media resp. /template directory?*
 
-answer
+For the media-directory of the !FileBrowser you can either use Djangos Admin-Media directory (/django/contrib/admin/media) or your own media-directory. You just have to change PATH_FILEBROWSER_MEDIA in fb_settings to point to the right location.
 ----
 *What new Features are planned?*
 
