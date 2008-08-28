@@ -6,54 +6,54 @@
   * The URL to your media-files.
   * Default: settings.MEDIA_URL + 'uploads/'
 
-  * *URL_ADMIN*
+=== URL_ADMIN ===
   * The !FileBrowser Admin-URL.
   * Default: /admin/filebrowser/
 
-  * *URL_HOME*
+=== URL_HOME ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *PATH_SERVER*
+=== PATH_SERVER ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *PATH_FILEBROWSER_MEDIA*
+=== PATH_FILEBROWSER_MEDIA ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *PATH_TINYMCE*
+=== PATH_TINYMCE ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *EXTENSIONS*
+=== EXTENSIONS ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *MAX_UPLOAD_SIZE*
+=== MAX_UPLOAD_SIZE ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *THUMB_PREFIX*
+=== THUMB_PREFIX ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *THUMBNAIL_SIZE*
+=== THUMBNAIL_SIZE ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *IMAGE_GENERATOR_DIRECTORY*
+=== IMAGE_GENERATOR_DIRECTORY ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *IMAGE_GENERATOR_LANDSCAPE*
+=== IMAGE_GENERATOR_LANDSCAPE ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *IMAGE_GENERATOR_PORTRAIT*
+=== IMAGE_GENERATOR_PORTRAIT ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
 
-  * *IMAGE_CROP_GENERATOR*
+=== IMAGE_CROP_GENERATOR ===
   * The URL to your Admin Index-Site.
   * Default: /admin/
