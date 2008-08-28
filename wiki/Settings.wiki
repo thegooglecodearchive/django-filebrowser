@@ -5,23 +5,42 @@
   * *URL_WWW*
     xxx
 
-  * *URL_WWW*
+  * *URL_ADMIN*
     xxx
 
-  * *URL_WWW*
+  * *URL_HOME*
     xxx
 
-  * *URL_WWW*
+  * *PATH_SERVER*
     xxx
 
-  * *URL_WWW*
+  * *PATH_FILEBROWSER_MEDIA*
     xxx
 
-  * *URL_WWW*
+  * *PATH_TINYMCE*
     xxx
 
-  * *URL_WWW*
+  * *EXTENSIONS*
     xxx
 
-  * *URL_WWW*
+  * *MAX_UPLOAD_SIZE*
     xxx
+
+  * *THUMB_PREFIX*
+    xxx
+
+  * *THUMBNAIL_SIZE*
+    xxx
+
+  * *IMAGE_GENERATOR_DIRECTORY*
+    xxx
+
+  * *IMAGE_GENERATOR_LANDSCAPE*
+    xxx
+
+  * *IMAGE_GENERATOR_PORTRAIT*
+    xxx
+
+  * *IMAGE_CROP_GENERATOR*
+    xxx
+
