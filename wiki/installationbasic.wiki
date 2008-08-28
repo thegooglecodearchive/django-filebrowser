@@ -11,7 +11,7 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
   # *Copy Templates*
     Copy /templates to your admin template-directory (cp -R /path/to/filebrowser/templates/filebrowser /path/to/your/admin/templates/)
   # *Change fb_settings.py*
-    Alternatively, overwrite the filebrowser settings in your project settings-file (settings.py).
+    Either change fb_settings.py or overwrite the filebrowser settings in your project settings-file (settings.py).
   # *Change your urls.py*
     Add the following lines BEFORE the admin-urls:
 {{{
