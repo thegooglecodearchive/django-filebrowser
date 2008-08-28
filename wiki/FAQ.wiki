@@ -16,5 +16,6 @@ For the media-directory of the !FileBrowser you can either use Djangos Admin-Med
 ----
 *What new Features are planned?*
 
+  # Translation.
   # It´d be nice to have an Upload Progress Bar.
 ----
