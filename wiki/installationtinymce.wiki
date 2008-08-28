@@ -2,7 +2,7 @@
 =Using the !FileBrowser with TinyMCE=
 
 You can also replace the TinyMCE Image/File Manager with the !FileBrowser.
-What you have to do is a !FileBrowser Callback. There´s an example in /media/js/ called TinyMCEAdmin.js - you can copy the !FileBrowserCallback to your own file or take a look at http://wiki.moxiecode.com/index.php/TinyMCE:Custom_filebrowser.
+What you have to do is a *!FileBrowser Callback*. There´s an example in /media/js/ called TinyMCEAdmin.js - you can copy the !FileBrowserCallback to your own file, take a look at http://wiki.moxiecode.com/index.php/TinyMCE:Custom_filebrowser or just use TinyMCEAdmin.js.
 
   # *Just add these lines to your !AdminModel*
 {{{
