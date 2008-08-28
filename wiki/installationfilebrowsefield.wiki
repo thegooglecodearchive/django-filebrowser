@@ -11,8 +11,8 @@ from filebrowser.fields import FileBrowseField
 
 class Publication(models.Model):
     ...
-    image = models.FileBrowseField(initial_directory="/media/uploads/images/blog/", extensions_allowed=['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], blank=True, null=True)
-    pdf = models.FileBrowseField(initial_directory="/media/uploads/documents/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
+    image = FileBrowseField(initial_directory="/media/uploads/images/blog/", extensions_allowed=['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], blank=True, null=True)
+    pdf = FileBrowseField(initial_directory="/media/uploads/documents/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
     ...
 }}}
   # *Add the !FileBrowser javascript to your !ModelAdmin*
