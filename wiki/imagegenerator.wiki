@@ -20,4 +20,4 @@ With the *Image Generator*, you are able to define different versions/sizes for 
     IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", 
     IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
-  # Now you just Upload Images with the !FileBrowser (with "Using Image Generator") and every single Image will automatically fit anywhere on your Website.
+  # Now you just Upload Images with the !FileBrowser (with "Using Image Generator") and every single Image will automatically fit anywhere on your Website. If you ever change the Grid of your Website or you want to change the size of your Images, just use a small python script to re-generate all Image Versions from the Original Image.
