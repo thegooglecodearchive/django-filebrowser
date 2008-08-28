@@ -35,16 +35,18 @@
   * Default: /admin/
 
 === THUMB_PREFIX ===
-  * The URL to your Admin Index-Site.
-  * Default: /admin/
+  * The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
+  * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
+  * Default: thumb_
 
 === THUMBNAIL_SIZE ===
-  * The URL to your Admin Index-Site.
+  * The size of your thumbnails for the Admin-Interface.
+  * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
   * Default: /admin/
 
 === IMAGE_GENERATOR_DIRECTORY ===
-  * The URL to your Admin Index-Site.
-  * Default: /admin/
+  * The postfix for your "Image Versions"-directory. If you Upload an Image called "myimage.jpg", your versions-directory will be called "myimage_jpg_versions" by default.
+  * Default: _versions
 
 === IMAGE_GENERATOR_LANDSCAPE ===
   * The URL to your Admin Index-Site.
