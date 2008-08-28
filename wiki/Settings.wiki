@@ -1,0 +1,27 @@
+#settings
+
+= Settings =
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
+
+  * *URL_WWW*
+    xxx
