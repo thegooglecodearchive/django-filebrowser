@@ -3,46 +3,56 @@
 = Settings =
 
   * *URL_WWW*
-    The URL to your media-files:
-    Default: settings.MEDIA_URL + 'uploads/'
+  * The URL to your media-files.
+  * Default: settings.MEDIA_URL + 'uploads/'
 
   * *URL_ADMIN*
-    The !FileBrowser Admin-URL.
-    Default: /admin/filebrowser/
+  * The !FileBrowser Admin-URL.
+  * Default: /admin/filebrowser/
 
   * *URL_HOME*
-    The URL to your Admin Index-Site.
-    Default: /admin/
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *PATH_SERVER*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *PATH_FILEBROWSER_MEDIA*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *PATH_TINYMCE*
     xxx
 
   * *EXTENSIONS*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *MAX_UPLOAD_SIZE*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *THUMB_PREFIX*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *THUMBNAIL_SIZE*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *IMAGE_GENERATOR_DIRECTORY*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *IMAGE_GENERATOR_LANDSCAPE*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *IMAGE_GENERATOR_PORTRAIT*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
 
   * *IMAGE_CROP_GENERATOR*
-    xxx
+  * The URL to your Admin Index-Site.
+  * Default: /admin/
