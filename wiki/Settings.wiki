@@ -9,65 +9,85 @@ All Settings can be defined in your projects settings-file (settings.py) or the 
 The location for your media-files. This is the initial directory for the !FileBrowser.
 
   * *Required*
-  * _Default: settings.MEDIA_URL + 'uploads/'_
+{{{
+Default: True
+}}}
 ----
 ==== URL_ADMIN ====
 The !FileBrowser Admin-URL.
 
   * *Required*
-  * Default: /admin/filebrowser/
+{{{
+Default: True
+}}}
 ----
 ==== URL_HOME ====
 The URL to your Admin Index-Site.
 
   * *Required*
-  * _Default: /admin/_
+{{{
+Default: True
+}}}
 ----
 ==== PATH_SERVER ====
 The URL to your Admin Index-Site.
 
   * *Required*
-  * _Default: os.path.join(settings.MEDIA_ROOT, 'uploads')_
+{{{
+Default: True
+}}}
 ----
 ==== PATH_FILEBROWSER_MEDIA ====
 The URL to your Admin Index-Site.
 
   * *Required*
-  * Default: /media/admin/filebrowser/
+{{{
+Default: True
+}}}
 ----
 ==== PATH_TINYMCE ====
 The path to your TinyMCE Installation.
 
   * *Only necessary if you use the !FileBrowser with TinyMCE)*
-  * _Default: /media/admin/tinymce/jscripts/tiny_mce/_
+{{{
+Default: True
+}}}
 ----
 ==== EXTENSIONS ====
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
 
   * *Required*
-  * _Default: {'Folder':[''], 'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], 'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'], 'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'], 'Sound':['.mp3','.mp4','.wav','.aiff','.midi'], 'Code':['.html','.py','.js','.css']}_
+{{{
+Default: True
+}}}
 ----
 ==== MAX_UPLOAD_SIZE ====
 The URL to your Admin Index-Site.
 
   * *Required*
-  * _Default: 5000000_
+{{{
+Default: True
+}}}
 ----
 ==== THUMB_PREFIX ====
   * The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
   * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
-  * _Default: thumb__
+{{{
+THUMB_PREFIX = getattr(settings, 'FILEBROWSER_THUMB_PREFIX', 'thumb_')
+}}}
 ----
 ==== THUMBNAIL_SIZE ====
   * The size of your thumbnails for the Admin-Interface.
   * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
-  * Default: /admin/
+{{{
+Default: True
+}}}
 ----
 ==== USE_IMAGE_GENERATOR ====
 Whether or not to use the !ImageGenerator. When this is *True*, you´ll get a checkbox called "Use Image Generator" with every Upload-Field. Moreover, every Image will have a button "Generate Images" to generate Image versions (this is useful, if Images are uploaded using FTP and not the !FileBrowser - you can upload Images using FTP and generate the Image Versions afterwards).
-
-  * *Required*
-  * Default: True
+{{{
+Default: True
+}}}
 ----
 ==== IMAGE_GENERATOR_DIRECTORY ====
   * The postfix for your "Image Versions"-directory. If you Upload an Image called "myimage.jpg", your versions-directory will be called "myimage_jpg_versions" by default.
