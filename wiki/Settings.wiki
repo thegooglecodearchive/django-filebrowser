@@ -27,25 +27,27 @@ The URL to your Admin Index-Site.
 The URL to your Admin Index-Site.
 
   * *Required*
-  * _Default: /admin/_
+  * _Default: os.path.join(settings.MEDIA_ROOT, 'uploads')_
 ----
 ==== PATH_FILEBROWSER_MEDIA ====
 The URL to your Admin Index-Site.
 
   * *Required*
-  * Default: /admin/
+  * Default: /media/admin/filebrowser/
 ----
 ==== PATH_TINYMCE ====
   * The URL to your Admin Index-Site.
-  * Default: /admin/
+  * Default: /media/admin/tinymce/jscripts/tiny_mce/
 ----
 ==== EXTENSIONS ====
-  * The URL to your Admin Index-Site.
-  * Default: /admin/
+The URL to your Admin Index-Site.
+
+  * *Required*
+  * _Default: {'Folder':[''], 'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], 'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'], 'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'], 'Sound':['.mp3','.mp4','.wav','.aiff','.midi'], 'Code':['.html','.py','.js','.css']}_
 ----
 ==== MAX_UPLOAD_SIZE ====
   * The URL to your Admin Index-Site.
-  * Default: /admin/
+  * _Default: {'Folder':[''], 'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], 'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'], 'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'], 'Sound':['.mp3','.mp4','.wav','.aiff','.midi'], 'Code':['.html','.py','.js','.css']}_
 ----
 ==== THUMB_PREFIX ====
   * The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
