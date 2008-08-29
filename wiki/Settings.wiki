@@ -36,23 +36,27 @@ The URL to your Admin Index-Site.
   * Default: /media/admin/filebrowser/
 ----
 ==== PATH_TINYMCE ====
-  * The URL to your Admin Index-Site.
-  * Default: /media/admin/tinymce/jscripts/tiny_mce/
+The path to your TinyMCE Installation.
+
+  * *Only necessary if you use the !FileBrowser with TinyMCE)*
+  * _Default: /media/admin/tinymce/jscripts/tiny_mce/_
 ----
 ==== EXTENSIONS ====
-The URL to your Admin Index-Site.
+Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
 
   * *Required*
   * _Default: {'Folder':[''], 'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], 'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'], 'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'], 'Sound':['.mp3','.mp4','.wav','.aiff','.midi'], 'Code':['.html','.py','.js','.css']}_
 ----
 ==== MAX_UPLOAD_SIZE ====
-  * The URL to your Admin Index-Site.
-  * _Default: {'Folder':[''], 'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], 'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'], 'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'], 'Sound':['.mp3','.mp4','.wav','.aiff','.midi'], 'Code':['.html','.py','.js','.css']}_
+The URL to your Admin Index-Site.
+
+  * *Required*
+  * _Default: 5000000_
 ----
 ==== THUMB_PREFIX ====
   * The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
   * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
-  * Default: thumb_
+  * _Default: thumb__
 ----
 ==== THUMBNAIL_SIZE ====
   * The size of your thumbnails for the Admin-Interface.
