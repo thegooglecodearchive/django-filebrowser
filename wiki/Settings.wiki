@@ -1,5 +1,3 @@
-#settings
-
 = Available Settings =
 
 All Settings can be defined in your projects settings-file (settings.py) or the !FileBrowsers settings-file (fb_settings.py). When using the projects settings-file, you have to use the prefix "FILEBROWSER_" for every setting (e.g. FILEBROWSER_PATH_SERVER instead of PATH_SERVER).
