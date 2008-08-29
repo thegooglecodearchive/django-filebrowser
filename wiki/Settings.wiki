@@ -53,6 +53,7 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Code':['.html','.py','.js','.css']
 })
 }}}
+With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
 ----
 ==== MAX_UPLOAD_SIZE ====
 The URL to your Admin Index-Site.
