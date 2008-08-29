@@ -8,49 +8,56 @@ All Settings can be defined in your projects settings-file (settings.py) or the 
 ==== URL_WWW ====
 The location for your media-files. This is the initial directory for the !FileBrowser.
 {{{
-Default: True
+URL_WWW = getattr(settings, "FILEBROWSER_URL_WWW", settings.MEDIA_URL + 'uploads/')
 }}}
 ----
 ==== URL_ADMIN ====
 The !FileBrowser Admin-URL.
 {{{
-Default: True
+URL_ADMIN = getattr(settings, "FILEBROWSER_URL_ADMIN", '/admin/filebrowser/')
 }}}
 ----
 ==== URL_HOME ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
 ----
 ==== PATH_SERVER ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+PATH_SERVER = getattr(settings, "FILEBROWSER_PATH_SERVER", os.path.join(settings.MEDIA_ROOT, 'uploads'))
 }}}
 ----
 ==== PATH_FILEBROWSER_MEDIA ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", "/media/admin/filebrowser/")
 }}}
 ----
 ==== PATH_TINYMCE ====
 The path to your TinyMCE Installation.
 {{{
-Default: True
+PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", "/media/admin/tinymce/jscripts/tiny_mce/")
 }}}
 ----
 ==== EXTENSIONS ====
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
 {{{
-Default: True
+EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
+    'Folder':[''],
+    'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'],
+    'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
+    'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'],
+    'Sound':['.mp3','.mp4','.wav','.aiff','.midi'],
+    'Code':['.html','.py','.js','.css']
+})
 }}}
 ----
 ==== MAX_UPLOAD_SIZE ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+MAX_UPLOAD_SIZE = getattr(settings, "FILEBROWSER_MAX_UPLOAD_SIZE", 5000000)
 }}}
 ----
 ==== THUMB_PREFIX ====
@@ -64,35 +71,35 @@ THUMB_PREFIX = getattr(settings, 'FILEBROWSER_THUMB_PREFIX', 'thumb_')
 The size of your thumbnails for the Admin-Interface.
 Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
 {{{
-Default: True
+THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', (50, 150))
 }}}
 ----
 ==== USE_IMAGE_GENERATOR ====
 Whether or not to use the !ImageGenerator. When this is *True*, you´ll get a checkbox called "Use Image Generator" with every Upload-Field. Moreover, every Image will have a button "Generate Images" to generate Image versions (this is useful, if Images are uploaded using FTP and not the !FileBrowser - you can upload Images using FTP and generate the Image Versions afterwards).
 {{{
-Default: True
+USE_IMAGE_GENERATOR = getattr(settings, 'FILEBROWSER_USE_IMAGE_GENERATOR', True)
 }}}
 ----
 ==== IMAGE_GENERATOR_DIRECTORY ====
 The postfix for your "Image Versions"-directory. If you Upload an Image called "myimage.jpg", your versions-directory will be called "myimage_jpg_versions" by default.
 {{{
-Default: True
+IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIRECTORY', '_versions')
 }}}
 ----
 ==== IMAGE_GENERATOR_LANDSCAPE ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
 ----
 ==== IMAGE_GENERATOR_PORTRAIT ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
 ----
 ==== IMAGE_CROP_GENERATOR ====
 The URL to your Admin Index-Site.
 {{{
-Default: True
+IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
