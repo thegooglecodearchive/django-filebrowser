@@ -11,64 +11,70 @@ The location for your media-files. This is the initial directory for the !FileBr
   * *Required*
   * _Default: settings.MEDIA_URL + 'uploads/'_
 ----
-=== URL_ADMIN ===
+==== URL_ADMIN ====
 The !FileBrowser Admin-URL.
 
   * *Required*
   * Default: /admin/filebrowser/
 ----
-=== URL_HOME ===
+==== URL_HOME ====
 The URL to your Admin Index-Site.
 
   * *Required*
   * _Default: /admin/_
 ----
-=== PATH_SERVER ===
+==== PATH_SERVER ====
 The URL to your Admin Index-Site.
 
   * *Required*
   * _Default: /admin/_
 ----
-=== PATH_FILEBROWSER_MEDIA ===
+==== PATH_FILEBROWSER_MEDIA ====
 The URL to your Admin Index-Site.
 
   * *Required*
   * Default: /admin/
 ----
-=== PATH_TINYMCE ===
+==== PATH_TINYMCE ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
 ----
-=== EXTENSIONS ===
+==== EXTENSIONS ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
 ----
-=== MAX_UPLOAD_SIZE ===
+==== MAX_UPLOAD_SIZE ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
 ----
-=== THUMB_PREFIX ===
+==== THUMB_PREFIX ====
   * The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
   * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
   * Default: thumb_
 ----
-=== THUMBNAIL_SIZE ===
+==== THUMBNAIL_SIZE ====
   * The size of your thumbnails for the Admin-Interface.
   * Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
   * Default: /admin/
 ----
-=== IMAGE_GENERATOR_DIRECTORY ===
+==== USE_IMAGE_GENERATOR ====
+Whether or not to use the !ImageGenerator. When this is *True*, you´ll get a checkbox called "Use Image Generator" with every Upload-Field. Moreover, every Image will have a button "Generate Images" to generate Image versions (this is useful, if Images are uploaded using FTP and not the !FileBrowser - you can upload Images using FTP and generate the Image Versions afterwards).
+
+  * *Required*
+  * Default: True
+----
+==== IMAGE_GENERATOR_DIRECTORY ====
   * The postfix for your "Image Versions"-directory. If you Upload an Image called "myimage.jpg", your versions-directory will be called "myimage_jpg_versions" by default.
   * Default: _versions
 ----
-=== IMAGE_GENERATOR_LANDSCAPE ===
+==== IMAGE_GENERATOR_LANDSCAPE ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
 ----
-=== IMAGE_GENERATOR_PORTRAIT ===
+==== IMAGE_GENERATOR_PORTRAIT ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
 ----
-=== IMAGE_CROP_GENERATOR ===
+==== IMAGE_CROP_GENERATOR ====
   * The URL to your Admin Index-Site.
   * Default: /admin/
