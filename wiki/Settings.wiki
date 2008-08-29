@@ -56,13 +56,13 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
 With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
 ----
 ==== MAX_UPLOAD_SIZE ====
-The URL to your Admin Index-Site.
+Max. Upload Size in Bytes.
 {{{
 MAX_UPLOAD_SIZE = getattr(settings, "FILEBROWSER_MAX_UPLOAD_SIZE", 5000000)
 }}}
 ----
 ==== THUMB_PREFIX ====
-The prefix for your thumbnals. If you have an Image called "myimage.jpg", your thumbnail will be called "thumb_myimage.jpg" by default.
+The prefix for your thumbnails. If you have an Image "myimage.jpg", your thumbnail will be "thumb_myimage.jpg" by default.
 Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
 {{{
 THUMB_PREFIX = getattr(settings, 'FILEBROWSER_THUMB_PREFIX', 'thumb_')
@@ -74,6 +74,7 @@ Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It�
 {{{
 THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', (50, 150))
 }}}
+For more on this subject, see the PIL Documentation (http://www.pythonware.com/library/pil/handbook/image.htm).
 ----
 ==== USE_IMAGE_GENERATOR ====
 Whether or not to use the !ImageGenerator. When this is *True*, you´ll get a checkbox called "Use Image Generator" with every Upload-Field. Moreover, every Image will have a button "Generate Images" to generate Image versions (this is useful, if Images are uploaded using FTP and not the !FileBrowser - you can upload Images using FTP and generate the Image Versions afterwards).
@@ -88,19 +89,21 @@ IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIREC
 }}}
 ----
 ==== IMAGE_GENERATOR_LANDSCAPE ====
-The URL to your Admin Index-Site.
+A list of Images to generate in the format (prefix, image width).
 {{{
 IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
+Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
 ----
 ==== IMAGE_GENERATOR_PORTRAIT ====
-The URL to your Admin Index-Site.
+A list of Images to generate in the format (prefix, image height).
 {{{
 IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
+Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
 ----
 ==== IMAGE_CROP_GENERATOR ====
-The URL to your Admin Index-Site.
+A list of Images to generate in the format (prefix, image width, image height).
 {{{
 IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
