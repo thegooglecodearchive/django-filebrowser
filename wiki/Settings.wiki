@@ -22,19 +22,19 @@ URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
 ----
 ==== PATH_SERVER ====
-The URL to your Admin Index-Site.
+The server-path to media-files.
 {{{
 PATH_SERVER = getattr(settings, "FILEBROWSER_PATH_SERVER", os.path.join(settings.MEDIA_ROOT, 'uploads'))
 }}}
 ----
 ==== PATH_FILEBROWSER_MEDIA ====
-The URL to your Admin Index-Site.
+The server-path to your filebrowser media-files.
 {{{
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", "/media/admin/filebrowser/")
 }}}
 ----
 ==== PATH_TINYMCE ====
-The path to your TinyMCE Installation.
+The server-path to your TinyMCE Installation.
 {{{
 PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", "/media/admin/tinymce/jscripts/tiny_mce/")
 }}}
@@ -91,18 +91,18 @@ A list of Images to generate in the format _(prefix, image width)_.
 {{{
 IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail_", "small_" and "medium_". You won´t get the "big_"-version.
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail", "small" and "medium". You won´t get the "big"-version.
 ----
 ==== IMAGE_GENERATOR_PORTRAIT ====
 A list of Images to generate in the format _(prefix, image height)_.
 {{{
 IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail_", "small_" and "medium_". You won´t get the "big_"-version.
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail", "small" and "medium". You won´t get the "big"-version.
 ----
 ==== IMAGE_CROP_GENERATOR ====
 A list of Images to generate in the format _(prefix, image width, image height)_.
 {{{
 IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 100px, you´ll get "cropped_". You won´t get the "croppedthumbnail_"-version.
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 100px, you´ll get "cropped". You won´t get the "croppedthumbnail"-version.
