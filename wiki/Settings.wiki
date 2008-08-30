@@ -91,17 +91,18 @@ A list of Images to generate in the format _(prefix, image width)_.
 {{{
 IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
-Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail_", "small_" and "medium_". You won´t get the "big_"-version.
 ----
 ==== IMAGE_GENERATOR_PORTRAIT ====
 A list of Images to generate in the format _(prefix, image height)_.
 {{{
 IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
-Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail_", "small_" and "medium_". You won´t get the "big_"-version.
 ----
 ==== IMAGE_CROP_GENERATOR ====
 A list of Images to generate in the format _(prefix, image width, image height)_.
 {{{
 IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
+Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 100px, you´ll get "cropped_". You won´t get the "croppedthumbnail_"-version.
