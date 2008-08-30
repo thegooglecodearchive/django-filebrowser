@@ -87,21 +87,21 @@ IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIREC
 }}}
 ----
 ==== IMAGE_GENERATOR_LANDSCAPE ====
-A list of Images to generate in the format (prefix, image width).
+A list of Images to generate in the format _(prefix, image width)_.
 {{{
 IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
 Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
 ----
 ==== IMAGE_GENERATOR_PORTRAIT ====
-A list of Images to generate in the format (prefix, image height).
+A list of Images to generate in the format _(prefix, image height)_.
 {{{
 IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
 }}}
 Note that if your Original Image is smaller than of defined image sizes, this new Image won´t be generated.
 ----
 ==== IMAGE_CROP_GENERATOR ====
-A list of Images to generate in the format (prefix, image width, image height).
+A list of Images to generate in the format _(prefix, image width, image height)_.
 {{{
 IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
 }}}
