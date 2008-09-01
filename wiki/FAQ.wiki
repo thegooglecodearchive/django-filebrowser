@@ -14,6 +14,10 @@ Django doesn´t serve media-files. This is done by Apache (or another webserver 
 
 For the media-directory of the !FileBrowser you can either use Djangos Admin-Media directory (/django/contrib/admin/media) or your own media-directory. You just have to change PATH_FILEBROWSER_MEDIA in fb_settings to point to the right location.
 ----
+*I´m using the Image-Generator and when I upload an Image not all predefined Image-Versions are being generated?*
+
+Are you sure that your Original Image (the one you are uploading) is *bigger* than all your predefined Image-Versions? If, for example, your Original Image is smaller than just one of your Image-Versions, all Image-Versions except this one are being generated.
+----
 *What new Features are planned?*
 
   # Translation.
