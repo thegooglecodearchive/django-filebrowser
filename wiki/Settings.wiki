@@ -53,7 +53,7 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Code':['.html','.py','.js','.css']
 })
 }}}
-With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
+Note: With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
 ----
 ==== MAX_UPLOAD_SIZE ====
 Max. Upload Size in Bytes.
@@ -66,14 +66,14 @@ The prefix for your thumbnails. If you have an Image "myimage.jpg", your thumbna
 {{{
 THUMB_PREFIX = getattr(settings, 'FILEBROWSER_THUMB_PREFIX', 'thumb_')
 }}}
-Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
+Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Because of the low quality, it´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
 ----
 ==== THUMBNAIL_SIZE ====
 The size of your thumbnails for the Admin-Interface.
 {{{
 THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', (50, 150))
 }}}
-Note: This Thumbnail is for diplaying your Image within the Admin-Interface. It´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
+Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Because of the low quality, it´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
 
 For more on this subject, see the PIL Documentation (http://www.pythonware.com/library/pil/handbook/image.htm).
 ----
