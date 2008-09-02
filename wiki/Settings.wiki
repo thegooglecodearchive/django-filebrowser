@@ -5,10 +5,13 @@ All Settings can be defined in your projects settings-file (settings.py) or the 
 
 ----
 ==== URL_WWW ====
-The location for your media-files. This is the base URL for all your media-files you want browse with the !FileBrowser.
+The location of your media-files. This is the base URL for all your media-files accessible for the !FileBrowser.
 {{{
 URL_WWW = getattr(settings, "FILEBROWSER_URL_WWW", settings.MEDIA_URL + 'uploads/')
 }}}
+Note: When you set URL_WWW to settings.MEDIA_URL you can use all your media-files with the !FileBrowser. Nevertheless, you may want to limit this to a subdirectory of settings.MEDIA_URL or a seperate media-server.
+
+*Important: If you change this setting, you should also change PATH_SERVER.*
 ----
 ==== URL_ADMIN ====
 The !FileBrowser Admin-URL.
@@ -28,18 +31,23 @@ The server-path to media-files. This is the initial/root server-path for the !Fi
 {{{
 PATH_SERVER = getattr(settings, "FILEBROWSER_PATH_SERVER", os.path.join(settings.MEDIA_ROOT, 'uploads'))
 }}}
+Note: When you set URL_WWW to settings.MEDIA_ROOT you can use all your media-files with the !FileBrowser. Nevertheless, you may want to limit this to a subpath of settings.MEDIA_ROOT or a seperate media-server.
+
+*Important: If you change this setting, you should also change URL_WWW.*
 ----
 ==== PATH_FILEBROWSER_MEDIA ====
 The server-path to your filebrowser media-files.
 {{{
-PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", "/media/admin/filebrowser/")
+PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
+Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
 ----
 ==== PATH_TINYMCE ====
 The server-path to your TinyMCE Installation.
 {{{
-PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", "/media/admin/tinymce/jscripts/tiny_mce/")
+PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 }}}
+Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
 ----
 ==== EXTENSIONS ====
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
