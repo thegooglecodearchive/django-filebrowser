@@ -11,8 +11,8 @@ from filebrowser.fields import FileBrowseField
 
 class Publication(models.Model):
     ...
-    image = FileBrowseField(initial_directory="/blog/", extensions_allowed=['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], blank=True, null=True)
-    pdf = FileBrowseField(initial_directory="/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
+    image = FileBrowseField(max_length=200, initial_directory="/blog/", extensions_allowed=['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'], blank=True, null=True)
+    pdf = FileBrowseField(max_length=200, initial_directory="/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
     ...
 }}}
   # *Add the !FileBrowser javascript to your !ModelAdmin*
@@ -24,6 +24,8 @@ class PublicationAdmin(admin.ModelAdmin):
 }}}
 
 === Attributes for the !FileBrowseField ===
+  * *max_length*
+    Since the !FileBrowseField is basically a !CharField, you have to define max_length.
   * *initial_directory*
     Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field. This is a subdirectory of PATH_SERVER (see fb_settings.py). If you define PATH_SERVER as "/var/www/vhosts/mysite.com/media/uploads/" and initial_directory as "/blog/", you´ll see the server-directory "/var/www/vhosts/mysite.com/media/uploads/blog/". If you don´t define initial_directory (or define initial_directory as ""), you´ll browse PATH_SERVER. Note that you are NOT able to see a directory above PATH_SERVER.
   * *extensions_allowed*
