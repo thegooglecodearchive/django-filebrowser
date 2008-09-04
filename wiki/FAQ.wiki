@@ -7,7 +7,7 @@ This is a list of frequently asked questions. If your question is not being answ
 
 Common errors are: 
    * You´ve installed the !FileBrowser to a directory which is not in your PYTHONPATH.
-   * The paths are wrong: Check your projects settings-file (settings.py) and the !FileBrowsers setting-file (fb_settings.py) for all the paths.
+   * The paths are wrong: Check your projects settings-file (settings.py) and the !FileBrowsers settings-file (fb_settings.py) for all the paths.
 ----
 *Is the !FileBrowser stable and ready for production-use?*
 
