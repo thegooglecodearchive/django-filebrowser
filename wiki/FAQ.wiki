@@ -1,3 +1,4 @@
+#labels Featured
 This is a list of frequently asked questions. If your question is not being answered, use the !FileBrower Google-Group (http://groups.google.com/group/django-filebrowser) or open a ticket. 
 
 = FAQ =
