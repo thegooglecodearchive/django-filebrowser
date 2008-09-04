@@ -27,7 +27,7 @@ For the media-directory of the !FileBrowser you can either use Djangos Admin-Med
 ----
 *Which directory should I use as the !FileBrowsers root directory?*
 
-The !FileBrowsers root directory (as defined with PATH_SERVER) is a directory for files/documents on your server, which should be used by you (or your client/editors) for uploading files. Let´s say you have a directory "media" on your server which holds all your media-stuff: Within this directory you may want to put some subdirectory, e.g. "admin" (for all admin-stuff), "site" (for your websites css- and js-files) and "uploads". In this case, "media/uploads" should be your !FileBrowsers root-directory.
+The !FileBrowsers root directory (as defined with PATH_SERVER) is a directory for files/documents on your server, which should be used by you (or your client/editors) for uploading files. Let´s say you have a directory "media" on your server which holds all your media-stuff: Within this directory you may want to put some subdirectories, e.g. "admin" (for all admin-stuff), "site" (for your websites images and css/js-files) and "uploads". In this case, "media/uploads" should be your !FileBrowsers root-directory.
 ----
 *I´m using the Image-Generator and when I upload an Image not all predefined Image-Versions are being generated?*
 
