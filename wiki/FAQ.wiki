@@ -32,4 +32,5 @@ Are you sure that your Original Image (the one you are uploading) is *bigger* th
 
   # Translation.
   # It´d be nice to have an Upload Progress Bar.
+  # I´m thinking of defining a model for the !FileBrowser to store file-information and to allow tagging of images/documents. 
 ----
