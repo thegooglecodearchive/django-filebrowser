@@ -1,4 +1,4 @@
-#frequently asked questions
+This is a list of frequently asked questions. If your question is not being answered, use the !FileBrower Gougle-Group (http://groups.google.com/group/django-filebrowser). If you think you´ve found an error, please open a ticket. 
 
 = FAQ =
 
