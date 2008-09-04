@@ -11,7 +11,7 @@ Common errors are:
 ----
 *Is the !FileBrowser stable and ready for production-use?*
 
-We are using the !FileBrowser for approx. 20 website now. It´s been used by our countries largest publishing agency as well as smaller companies on a daily basis. So, the answer is *yes*.
+We are using the !FileBrowser for around 20 websites right now. It´s been used by our countries largest publishing agency as well as smaller companies on a daily basis. So, the answer is *yes*.
 ----
 *Why is it not possible to add the !FileBrowser to INSTALLED_APPS?*
 
@@ -24,6 +24,10 @@ Django doesn´t serve media-files. This is done by Apache (or another webserver 
 *Where should I put the media-directory?*
 
 For the media-directory of the !FileBrowser you can either use Djangos Admin-Media directory (/django/contrib/admin/media) or your own media-directory. You just have to change PATH_FILEBROWSER_MEDIA in fb_settings to point to the right location.
+----
+*Which directory should I use as the !FileBrowsers root directory?*
+
+The !FileBrowsers root directory (as defined with PATH_SERVER) is a directory for files/documents on your server, which should be used by you (or your client/editors) for uploading files. Let´s say you have a directory "media" on your server which holds all your media-stuff: Within this directory you may want to put some subdirectory, e.g. "admin" (for all admin-stuff), "site" (for your websites css- and js-files) and "uploads". In this case, "media/uploads" should be your !FileBrowsers root-directory.
 ----
 *I´m using the Image-Generator and when I upload an Image not all predefined Image-Versions are being generated?*
 
