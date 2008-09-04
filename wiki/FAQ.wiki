@@ -2,6 +2,16 @@
 
 = FAQ =
 
+*I´ve installed the !FileBrowser but it doesn´t work?*
+
+Common errors are: 
+   * You´ve installed the !FileBrowser to a directory which is not in your PYTHONPATH.
+   * The paths are wrong: Check your projects settings-file (settings.py) and the !FileBrowsers setting-file (fb_settings.py) for all the paths.
+----
+*Is the !FileBrowser stable and ready for production-use?*
+
+We are using the !FileBrowser for approx. 20 website now. It´s been used by our countries largest publishing agency as well as smaller companies on a daily basis. So, the answer is *yes*.
+----
 *Why is it not possible to add the !FileBrowser to INSTALLED_APPS?*
 
 Well, it IS possible. It (currently) just doesn´t make sense from my point of view. There´s no model and listing the !FileBrowser somewhere inbetween other INSTALLED_APPS on the Index-Site of the Admin-Interface, is not very useful.
