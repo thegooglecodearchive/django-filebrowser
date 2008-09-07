@@ -7,7 +7,7 @@
 svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
 }}}
   # *Copy Media*
-    Copy the folder /media either to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/) or to your preferred media-directory (in this case, you have to edit PATH_FILEBROWSER_MEDIA in fb_settings).
+    Copy the folder /media either to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/) or to your preferred media-directory (in this case, you have to edit URL_FILEBROWSER_MEDIA in fb_settings).
   # *Copy Templates*
     Copy /templates to your admin template-directory (cp -R /path/to/filebrowser/templates/filebrowser /path/to/your/admin/templates/)
   # *Optional: Change fb_settings.py*
