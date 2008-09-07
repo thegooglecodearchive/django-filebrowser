@@ -26,6 +26,20 @@ The URL to your Admin Index-Site.
 URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
 ----
+==== URL_FILEBROWSER_MEDIA ====
+The URL to your filebrowser media-files.
+{{{
+URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
+}}}
+Note: You have to change this setting, if you install the media-files of the FileBrowser outside your admin-media directory.
+----
+==== URL_TINYMCE ====
+The URL to your TinyMCE Installation.
+{{{
+URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
+}}}
+Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
+----
 ==== PATH_SERVER ====
 The server-path to media-files. This is the initial/root server-path for the !FileBrowser.
 {{{
