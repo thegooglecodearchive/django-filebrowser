@@ -19,11 +19,11 @@ Well, it IS possible. It (currently) just doesn´t make sense from my point of v
 ----
 *Why do I have to copy the media-directory?*
 
-Django doesn´t serve media-files. This is done by Apache (or another webserver like lighttpd). Therefore, your media-files should be placed outside your Django project. You can copy the media-files to wherever you want - you just have to change PATH_FILEBROWSER_MEDIA in fb_settings.
+Django doesn´t serve media-files. This is done by Apache (or another webserver like lighttpd). Therefore, your media-files should be placed outside your Django project. You can copy the media-files to wherever you want - you just have to change URL_FILEBROWSER_MEDIA in fb_settings.
 ----
 *Where should I put the media-directory?*
 
-For the media-directory of the !FileBrowser you can either use Djangos Admin-Media directory (/django/contrib/admin/media) or your own media-directory. You just have to change PATH_FILEBROWSER_MEDIA in fb_settings to point to the right location.
+For the media-directory of the !FileBrowser you can either use Djangos Admin-Media directory (/django/contrib/admin/media) or your own media-directory. You just have to change URL_FILEBROWSER_MEDIA in fb_settings to point to the right location.
 ----
 *Which directory should I use as the !FileBrowsers root directory?*
 
