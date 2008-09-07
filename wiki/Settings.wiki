@@ -31,7 +31,7 @@ The URL to your filebrowser media-files.
 {{{
 URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
-Note: You have to change this setting, if you install the media-files of the FileBrowser outside your admin-media directory.
+Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
 ----
 ==== URL_TINYMCE ====
 The URL to your TinyMCE Installation.
