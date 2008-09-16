@@ -15,7 +15,7 @@ We are using the !FileBrowser for around 20 websites right now. It´s been used 
 ----
 *Why is it not possible to add the !FileBrowser to INSTALLED_APPS?*
 
-Well, it IS possible. It (currently) just doesn´t make sense from my point of view. There´s no model and listing the !FileBrowser somewhere inbetween other INSTALLED_APPS on the Index-Site of the Admin-Interface, is not very useful.
+Well, it IS possible. It (currently) just doesn´t make sense from my point of view. There´s no model and listing the !FileBrowser somewhere inbetween other INSTALLED_APPS on the Index-Site of the Admin-Interface, is not very useful. Besides that, the Links "Add" and "Change" are not relevant.
 ----
 *Why do I have to copy the media-directory?*
 
@@ -32,6 +32,10 @@ The !FileBrowsers root directory (as defined with PATH_SERVER) is a directory fo
 *I´m using the Image-Generator and when I upload an Image not all predefined Image-Versions are being generated?*
 
 Are you sure that your Original Image (the one you are uploading) is *bigger* than all your predefined Image-Versions? If, for example, your Original Image is smaller than just one of your Image-Versions, all Image-Versions except this one are being generated.
+----
+*I've installed the !FileBrowser, but I don´t see any buttons/icons?*
+
+The path to the !FileBrowser media-files is wrong. Check fb_settings.py.
 ----
 *What new Features are planned?*
 
