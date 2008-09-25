@@ -2,7 +2,7 @@
 =Basic Installation=
 
   # *Install the !FileBrowser*
-    Installe the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
+    Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
 {{{
 svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
 }}}
