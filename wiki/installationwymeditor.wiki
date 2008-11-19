@@ -1,5 +1,4 @@
 =Using the !FileBrowser with WYMEditor=
 
-I haven´t tried it myself, because WYMEditor currently lacks some basic features (from my point of view). Nevertheless, here´s an installation guide ...
-
+I haven´t tried it myself, because WYMEditor currently lacks some basic features (from my point of view). Nevertheless, here´s an installation guide:
 http://trac.wymeditor.org/trac/wiki/Contrib/IntegrateInDjango
