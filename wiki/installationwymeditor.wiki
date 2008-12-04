@@ -8,4 +8,4 @@ If you just need to handle the most basic document structure, WYMEditor is a gre
 Nevertheless, here´s an installation guide:
 http://trac.wymeditor.org/trac/wiki/Contrib/IntegrateInDjango
 
-*Note: This is a big warning - using WYMEditor is NOT recommended by the contributors of the Django !FileBrowser.*
+*Note: This is a big warning - using WYMEditor is NOT recommended by the contributors of the Django !FileBrowser. Use TinyMCE instead.*
