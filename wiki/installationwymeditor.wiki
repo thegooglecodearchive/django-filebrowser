@@ -1,11 +1,11 @@
 #labels Featured
 =Using the !FileBrowser with WYMEditor=
 
-From my point of view, WYMEditor gets it right for about 97.3%. Not being able to insert/edit DIVs and SPANs is horrible though. The lack of a fullscreen-mode is another drawback. And since selected CLASSES are not highlighted, I don´t think customers will be satisfied ... so, waiting for !WysiHat instead ... 
+From my point of view, WYMEditor gets it right for about 97.3%. Not being able to insert/edit DIVs and SPANs is horrible though. The lack of a fullscreen-mode is another drawback. And since selected CLASSES are not highlighted, I don´t think customers will be satisfied ...
 
-If you just need to handle the most basic document structure, WYMEditor is a great solution. If your document is slightly more complicated, unfortunately there doesn´t seem to be a proper editing solution right now :-( 
+If you just need to handle the most basic document structure, WYMEditor is a great solution.
 
-Nevertheless, here´s an installation guide:
+Here´s an installation guide:
 http://trac.wymeditor.org/trac/wiki/Contrib/IntegrateInDjango
 
-*Note: This is a big warning - using WYMEditor is NOT recommended by the contributors of the Django !FileBrowser. Use TinyMCE instead.*
+*This is a warning: using WYMEditor is currently NOT recommended by the contributors of the Django !FileBrowser. Use TinyMCE instead.*
