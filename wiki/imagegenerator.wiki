@@ -32,3 +32,12 @@ With the *Image Generator*, you are able to define different versions/sizes for 
   * Now you just Upload Images with the !FileBrowser (with "Using Image Generator") and every single Image will automatically fit *anywhere* on your Website. If you ever change the Grid of your Website or you want to change the size of your Images, just use a small python script to re-generate all Image Versions from the Original Image.
 
   * *Please Note* that Versions will only be generated for Images larger than the specified Version. So, let´s say you Upload an Image with a width of 500px. Taken the Versions defined above, the "Big"-Version won´t be generated, because your Original Image (500px) is smaller than the Big-Version (620px).
+
+
+== Accessing Image-Versions in a Template ==
+
+Within your Template, you could get the different Image-Versions by typing
+
+{{{
+    {% entry.image.medium %}
+}}}
