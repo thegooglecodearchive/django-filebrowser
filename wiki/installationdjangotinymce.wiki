@@ -1,0 +1,3 @@
+=Using the !FileBrowser with django-tinymce (recommended)=
+
+When [http://code.google.com/p/django-tinymce/ django-tinymce] is installed, all you have to do is set TINYMCE_FILEBROWSER, see http://django-tinymce.googlecode.com/svn/trunk/docs/.build/html/installation.html#id2
