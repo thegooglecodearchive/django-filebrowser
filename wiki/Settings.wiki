@@ -149,3 +149,15 @@ Force the use of the image generator each time a file is uploaded via !FileBrows
 {{{
 FORCE_GENERATOR = getattr(settings, 'FILEBROWSER_FORCE_GENERATOR', False)
 }}}
+----
+==== FORCE_GENERATOR_RUN ====
+If set True, Image Generator will copy the image if the dimensions are smaller than the specified dimensions.
+{{{
+FORCE_GENERATOR_RUN = getattr(settings, 'FILEBROWSER_FORCE_GENERATOR_RUN', False)
+}}}
+----
+==== STRICT_PIL ====
+If set to True, then !FileBrowser will not try to import a mis-installed PIL.
+{{{
+STRICT_PIL = getattr(settings, 'FILEBROWSER_STRICT_PIL', False)
+}}}
