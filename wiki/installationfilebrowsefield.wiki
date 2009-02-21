@@ -15,13 +15,6 @@ class Publication(models.Model):
     pdf = FileBrowseField(max_length=200, initial_directory="/pdf/", extensions_allowed=['.pdf'], blank=True, null=True)
     ...
 }}}
-  # *Add the !FileBrowser javascript to your !ModelAdmin*
-{{{
-class PublicationAdmin(admin.ModelAdmin):
-    ...
-    class Media:
-        js = ['/path/to/admin/media/filebrowser/js/AddFileBrowser.js']
-}}}
 
 === Attributes for the !FileBrowseField ===
   * *max_length*
