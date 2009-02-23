@@ -4,7 +4,7 @@
   # *Install the !FileBrowser*
     Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
 {{{
-svn checkout http://django-filebrowser.googlecode.com/svn/trunk/ filebrowser
+svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ filebrowser
 }}}
   # *Copy Media*
     Copy the folder /media either to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/) or to your preferred media-directory (in this case, you have to edit URL_FILEBROWSER_MEDIA in fb_settings).
