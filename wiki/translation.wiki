@@ -1,0 +1,16 @@
+= Translation =
+
+This page should help you, if you want to translate the !FileBrowser or of you already manage a translation.
+
+= Available Languages =
+
+English, German, French, Italian, Chinese (Simplified, Traditional), Dutch.
+
+= Instructions =
+
+To create a language file, just type "django-admin.py makemessages -l language-shortcut" within your filebrowser-directory.
+To update a language file, type "django-admin.py makemessages -a" from within your filebrowser-directory.
+
+= Updates =
+
+xxx
