@@ -1,6 +1,6 @@
 = Translation =
 
-This page should help you, if you want to translate the !FileBrowser or of you already manage a translation.
+This page should help you, if you want to translate the !FileBrowser or if you already manage a translation.
 
 = Available Languages =
 
