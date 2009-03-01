@@ -30,4 +30,4 @@ msgstr "Sound"
 
 = Updates =
 
-Updates of translation-strings are liste below.
+Updates of translation-strings are listed below.
