@@ -11,6 +11,7 @@ English, German, Spanish, Catalan, Italian, Chinese (Simplified, Traditional), D
 
   * To create a language file, just type "django-admin.py makemessages -l language-shortcut" within your filebrowser-directory.
   * To update a language file, type "django-admin.py makemessages -a" from within your filebrowser-directory.
+  * *Don't forget to update the copyright-information at the top of your .po-file.*
 
 Note: You have to add these lines manually at line 19 of your translation file in order to translate the file-types (the code below is taken from the german-translation):
 
