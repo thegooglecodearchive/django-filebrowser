@@ -41,3 +41,9 @@ Within your Template, you could get the different Image-Versions by typing
 {{{
     {% entry.image.medium %}
 }}}
+
+The Original Images is accessible with
+
+{{{
+    {% entry.image.original %}
+}}}
