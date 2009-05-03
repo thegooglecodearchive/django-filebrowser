@@ -161,3 +161,9 @@ If set to True, then !FileBrowser will not try to import a mis-installed PIL.
 {{{
 STRICT_PIL = getattr(settings, 'FILEBROWSER_STRICT_PIL', False)
 }}}
+----
+==== DISALLOWED_FOLDER_NAMES ====
+A list with names not allowed for folders (becasue these names are used within filebrowser URLs).
+{{{
+DISALLOWED_FOLDER_NAMES = getattr(settings, "FILEBROWSER_DISALLOWED_FOLDER_NAMES", ['mkdir', 'makethumbs', 'upload', 'rename', 'delete'])
+}}}
