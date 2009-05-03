@@ -20,15 +20,6 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ fil
   # *Add the !FileBrowser to your Admin Indexpage*
     Edit /templates/admin/index.html. Add this code BEFORE {% for app in app_list %} ... {% endfor %}:
 {{{
-<div class="module">
-    <table>
-        <caption>File-Browser</caption>
-        <tr class="row2">
-            <th scope="row"><a href="{% url filebrowser-index %}">File-Browser</a></th>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-        </tr>
-    </table>
-</div>
+{% include "filebrowser/append.html" %}
 }}}
   # That's it.
