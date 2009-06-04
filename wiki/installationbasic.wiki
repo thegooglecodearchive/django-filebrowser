@@ -12,6 +12,7 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ fil
     Open your projects settings-file (settings.py) and add the filebrowser to your INSTALLED APPS. 
   # *Change fb_settings.py*
     Either change fb_settings.py or overwrite the filebrowser settings in your project settings-file (settings.py). See "Available Settings".
+    Note: You do need an upload-directory. The default one is "uploads" inside your MEDIA_ROOT. Check URL_WWW and PATH_SERVER if you change this directory.
   # *Change your urls.py*
     Add the following line BEFORE the admin-urls:
 {{{
