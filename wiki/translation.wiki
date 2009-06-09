@@ -16,7 +16,7 @@ English, German, Spanish, Catalan, Italian, Chinese (Simplified, Traditional), D
 Note: You have to add these lines manually at line 19 of your translation file in order to translate the file-types (the code below is taken from the german-translation):
 
 {{{
-#: extension translation
+# extension translation
 msgid "Folder"
 msgstr "Ordner"
 msgid "Image"
