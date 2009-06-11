@@ -24,3 +24,7 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ fil
 {% include "filebrowser/append.html" %}
 }}}
   # That's it.
+
+----
+*IMPORTANT: About 90% of the problems installing the filebrowser are related to wrong URLS and/or PATHS. So, please read through AvailableSettings and check everything with either _URL_ or _PATH_ carefully.*
+----
