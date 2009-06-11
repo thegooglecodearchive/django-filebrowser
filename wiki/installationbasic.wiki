@@ -26,5 +26,5 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ fil
   # That's it.
 
 ----
-*IMPORTANT: About 90% of the problems installing the filebrowser are related to wrong URLS and/or PATHS. So, please read through [http://code.google.com/p/django-filebrowser/wiki/Settings Available Settings] and check everything with either _URL_ or _PATH_ carefully.*
+*IMPORTANT: About 90% of the problems installing the filebrowser are related to wrong URLS and/or PATHS. So, please read through [http://code.google.com/p/django-filebrowser/wiki/Settings Available Settings] and check everything with either _URL_ or _PATH_ carefully (especially when using TinyMCE).*
 ----
