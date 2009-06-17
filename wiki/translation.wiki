@@ -5,7 +5,7 @@ This page should help you, if you want to translate the !FileBrowser or if you a
 
 = Available Languages =
 
-English, German, Spanish, Catalan, Italian, Chinese (Simplified, Traditional), Dutch, Russian, French.
+English, German, Spanish, Catalan, Italian, Chinese (Simplified, Traditional), Dutch, Russian, French, Serbian.
 
 = Instructions =
 
