@@ -23,6 +23,8 @@ class Publication(models.Model):
     Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field. This is a subdirectory of PATH_SERVER (see fb_settings.py). If you define PATH_SERVER as "/var/www/vhosts/mysite.com/media/uploads/" and initial_directory as "/blog/", you´ll see the server-directory "/var/www/vhosts/mysite.com/media/uploads/blog/". If you don´t define initial_directory (or define initial_directory as ""), you´ll browse PATH_SERVER. Note that you are NOT able to see a directory above PATH_SERVER.
   * *extensions_allowed*
     List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. *If you want to allow every possible file-extension, set extensions_allowed="" or remove the attribute*. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
+  * *format*
+    Use this attribute to restrict selection to specific filetypes. E.g., if you use *format='Image'*, only Images can be selected from the !FileBrowser. Note: Image has to befined with SELECT_FORMATS.
 
 === Image Preview ===
 Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
