@@ -32,6 +32,6 @@ msgstr "Sound"
 
 = Updates =
 
-2009-06-15: changed the line "#: extension translation" to "# extension translation".
-
 Updates of translation-strings are listed below.
+
+*2009-06-15*: changed the line "#: extension translation" to "# extension translation".
