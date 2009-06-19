@@ -9,7 +9,7 @@ The location of your media-files. This is the base URL for all your media-files 
 {{{
 URL_WWW = getattr(settings, "FILEBROWSER_URL_WWW", '/media/uploads/')
 }}}
-Note: When you set URL_WWW to settings.MEDIA_URL you can use all your media-files with the !FileBrowser. Nevertheless, you may want to limit this to a subdirectory of settings.MEDIA_URL or a seperate media-server.
+Note: When you set URL_WWW to settings.MEDIA_URL you can use all your media-files with the !FileBrowser. You may want to restrict access to a subdirectory of settings.MEDIA_URL or a seperate media-server.
 
 *Important: If you change this setting, you should also change PATH_SERVER.*
 ----
@@ -77,6 +77,16 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
 }}}
 Note: With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
 ----
+==== SELECT_FORMATS ====
+Set different Options for selecting elements from the !FileBrowser.
+{{{
+SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
+    'File':['Folder','Document'],
+    'Image':['Image'],
+    'Media':['Video','Sound']
+})
+}}}
+----
 ==== MAX_UPLOAD_SIZE ====
 Max. Upload Size in Bytes.
 {{{
@@ -99,7 +109,7 @@ Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Bec
 ==== THUMBNAIL_SIZE ====
 The size of your thumbnails for the Admin-Interface.
 {{{
-THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', (50, 150))
+THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', '50x50')
 }}}
 Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Because of the low quality, it´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
 
