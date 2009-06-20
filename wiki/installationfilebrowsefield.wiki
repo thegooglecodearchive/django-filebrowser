@@ -27,4 +27,6 @@ class Publication(models.Model):
     Use this attribute to restrict selection to specific filetypes. E.g., if you use *format='Image'*, only Images can be selected from the !FileBrowser. Note: Image has to befined with SELECT_FORMATS.
 
 === Image Preview ===
-Be aware that the preview-image is the thumbnail generated on file-upload. Therefore, if you upload a file using FTP and there´s no thumbnail, you won´t get a preview. If you DO get an image-thumbnail, you can click the thumbnail to see the original-image.
+The Thumbnail will automatically be generated using sorl-thumbnail. Clicking on the Thumbnail below the !FileBrowseField will open the Image in a new window/tab.
+
+ 
