@@ -144,22 +144,22 @@ MAX_UPLOAD_SIZE = getattr(settings, "FILEBROWSER_MAX_UPLOAD_SIZE", 5000000)
 New in Version 3.0: When browsing a directory on the server, you get a !FileObject (see base.py) for every file within that directory.
 
 Any !FileObject has the following attributes:
-  * filename
-  * filetype
-  * filesize
-  * date
-  * datetime (datetime object)
-  * path (relative to MEDIA_ROOT)  
-  * path_full (including MEDIA_ROOT)
-  * url_full (including MEDIA__URL)
-  * url_save (URL used for the !FileBrowseField)
-  * url_thumbnail
+  * *filename*
+  * *filetype*
+  * *filesize*
+  * *date*
+  * *datetime* (datetime object)
+  * *path* (relative to MEDIA_ROOT)  
+  * *path_full* (including MEDIA_ROOT)
+  * *url_full* (including MEDIA__URL)
+  * *url_save* (URL used for the !FileBrowseField)
+  * *url_thumbnail*
 
 An Image has additional attributes:
-  * image_dimensions (tuple)
-  * image_orientation (either "landscape" or "portrait")
-  * image_width
-  * image_height
+  * *image_dimensions* (tuple)
+  * *image_orientation* (either "landscape" or "portrait")
+  * *image_width*
+  * *image_height*
 
 Set DEBUG to True in order to see the !FileObject values.
 <br><br>
