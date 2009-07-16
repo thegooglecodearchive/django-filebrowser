@@ -207,7 +207,14 @@ to output the contents of your image-field. For example, this could result in so
 
 Now, if you want to actually display the Image, you write:
 {{{
-<img src="{{ publication.image }}" class="myimageclass" width="{{ publication.image.image_width }}" />
+<img src="{{ publication.image }}" class="ImageClass" />
+}}}
+
+More complicated, if you want to display "Landscape" Images only (I know, bad example):
+{{{
+{% ifequal publication.image.image_orientation "landscape" %}
+<img src="{{ publication.image }}" class="ImageClass" />
+{% endifequal %}
 }}}
 <br><br>
 ----
