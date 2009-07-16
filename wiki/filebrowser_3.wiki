@@ -1,4 +1,4 @@
-This page is a preliminary documentation on Version 3.0 of the !FileBrowser.<br><br>
+This page is a preliminary documentation on Version 3.0 of the !FileBrowser. The behaviour can slightly change within the next couple of weeks.<br><br>
 ----
 <br>
 =Basic Installation=
