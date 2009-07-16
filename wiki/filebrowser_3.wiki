@@ -36,7 +36,7 @@ Set to True in order to get an additional column with the fileobjects data.
 {{{
 DEBUG = getattr(settings, "FILEBROWSER_DEBUG", False)
 }}}
-=== MEDIA_ROOT & MEDIA_URL ===
+=== MAIN URL/PATH SETTINGS ===
 The absolute path to the directory that holds your media-files.
 {{{
 MEDIA_ROOT = getattr(settings, "FILEBROWSER_MEDIA_ROOT", settings.MEDIA_ROOT)
@@ -45,7 +45,6 @@ URL that handles the media served from MEDIA_ROOT.
 {{{
 MEDIA_URL = getattr(settings, "FILEBROWSER_MEDIA_URL", settings.MEDIA_URL)
 }}}
-=== DIRECTORY ===
 Main !FileBrowser Directory. This has to be a directory within MEDIA_ROOT. Leave empty in order to browse all files under MEDIA_ROOT.
 {{{
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
