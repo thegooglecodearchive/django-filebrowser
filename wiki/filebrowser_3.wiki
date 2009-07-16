@@ -67,33 +67,21 @@ The URL to your Admin Index-Site.
 URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
 ----
-==== URL_FILEBROWSER_MEDIA ====
-The URL to your filebrowser media-files.
+==== URL_FILEBROWSER_MEDIA & PATH_FILEBROWSER_MEDIA ====
+The URL and Path to your filebrowser media-files.
 {{{
 URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
-}}}
-Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
-----
-==== PATH_FILEBROWSER_MEDIA ====
-The server-path to your filebrowser media-files.
-{{{
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
-Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
+Note: You have to change this settings, if you install the media-files of the !FileBrowser outside your admin-media directory.
 ----
-==== URL_TINYMCE ====
+==== URL_TINYMCE & PATH_TINYMCE ====
 The URL to your TinyMCE Installation.
 {{{
 URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
-}}}
-Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
-----
-==== PATH_TINYMCE ====
-The server-path to your TinyMCE Installation.
-{{{
 PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 }}}
-Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
+Note: You have to change this settings, if you install TinyMCE outside your admin-media directory.
 ----
 ==== EXTENSIONS ====
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
