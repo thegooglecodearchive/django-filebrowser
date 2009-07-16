@@ -191,4 +191,17 @@ The Thumbnail will automatically be generated. Clicking on the Thumbnail below t
 = Templatetags =
 New in Version 3.0: Instead of Generating Image-Versions on Upload, the Versions are now generated "on the fly" with using Templatetags.
 
-Basically, you have two different tags to choose from: *version* and *version_object*.
+You have two different tags to choose from: *version* and *version_object*.
+
+=== version ===
+Get the URL for a version of an existing Image according to the predefined VERSIONS settings (see fb_settings).
+{{{
+{% version field_name version_prefix %}
+}}}    
+Use {% version my_image 'medium' %} in order to display the medium-size version of an Image stored in a field name my_image. version_prefix can be a string or a variable. If version_prefix is a string, use quotes.
+=== version_object ===
+Returns a context variable 'version_object'.
+{{{
+{% version_object field_name version_prefix %}
+}}}    
+Use {% version_object my_image 'medium' %} in order to retrieve the medium version of an Image stored in a field name my_image. version_prefix can be a string or a variable. if version_prefix is a string, use quotes.
