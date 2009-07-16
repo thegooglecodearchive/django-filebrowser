@@ -140,6 +140,13 @@ MAX_UPLOAD_SIZE = getattr(settings, "FILEBROWSER_MAX_UPLOAD_SIZE", 5000000)
 <br>
 ----
 <br>
+=The !FileObject=
+New in Version 3.0: When browsing a directory on the server, you get a !FileObject (see base.py) for every file within that directory.
+
+Set DEBUG to True in order to see the !FileObject values.
+<br><br>
+----
+<br>
 =Using the !FileBrowseField=
 
 The !FileBrowseField is a Model field (see http://docs.djangoproject.com/en/dev/ref/models/fields/#field-types for other field types) used to select a File/Document/Image/Folder from your Media Server.
