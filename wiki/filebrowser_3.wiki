@@ -1,5 +1,6 @@
-This page is a preliminary documentation on Version 3.0 of the !FileBrowser. 
+This page is a preliminary documentation on Version 3.0 of the !FileBrowser.<br><br>
 ----
+<br>
 =Basic Installation=
 
   # *Install the !FileBrowser*
@@ -24,20 +25,18 @@ svn checkout http://django-filebrowser.googlecode.com/svn/branches/filebrowser_3
 {% include "filebrowser/append.html" %}
 }}}
   # That's it.
-
+<br>
 ----
+<br>
 = Available Settings =
 
 All Settings can be defined in your projects settings-file (settings.py) or the !FileBrowsers settings-file (fb_settings.py). When using the projects settings-file, you have to use the prefix "FILEBROWSER" for every setting (e.g. FILEBROWSER_MEDIA_URL instead of MEDIA_URL).
-
-----
-==== DEBUG ===
+=== DEBUG ==
 Set to True in order to get an additional column with the fileobjects data.
 {{{
 DEBUG = getattr(settings, "FILEBROWSER_DEBUG", False)
 }}}
-----
-==== MEDIA_ROOT & MEDIA_URL ====
+=== MEDIA_ROOT & MEDIA_URL ===
 The absolute path to the directory that holds your media-files.
 {{{
 MEDIA_ROOT = getattr(settings, "FILEBROWSER_MEDIA_ROOT", settings.MEDIA_ROOT)
@@ -46,14 +45,12 @@ URL that handles the media served from MEDIA_ROOT.
 {{{
 MEDIA_URL = getattr(settings, "FILEBROWSER_MEDIA_URL", settings.MEDIA_URL)
 }}}
-----
-==== DIRECTORY ====
+=== DIRECTORY ===
 Main !FileBrowser Directory. This has to be a directory within MEDIA_ROOT. Leave empty in order to browse all files under MEDIA_ROOT.
 {{{
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
 }}}
-----
-==== URL_ADMIN & URL_HOME ====
+=== URL_ADMIN & URL_HOME ===
 The !FileBrowser Admin-URL. If you change this URL, you also have to change the file urls.py.
 {{{
 URL_ADMIN = getattr(settings, "FILEBROWSER_URL_ADMIN", '/admin/filebrowser/')
@@ -62,24 +59,21 @@ The URL to your Admin Index-Site.
 {{{
 URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
-----
-==== URL_FILEBROWSER_MEDIA & PATH_FILEBROWSER_MEDIA ====
+=== URL_FILEBROWSER_MEDIA & PATH_FILEBROWSER_MEDIA ===
 The URL and Path to your filebrowser media-files.
 {{{
 URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
 Note: You have to change this settings, if you install the media-files of the !FileBrowser outside your admin-media directory.
-----
-==== URL_TINYMCE & PATH_TINYMCE ====
+=== URL_TINYMCE & PATH_TINYMCE ===
 The URL to your TinyMCE Installation.
 {{{
 URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 }}}
 Note: You have to change this settings, if you install TinyMCE outside your admin-media directory.
-----
-==== EXTENSIONS ====
+=== EXTENSIONS ===
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
 {{{
 EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
@@ -91,8 +85,7 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Code':['.html','.py','.js','.css']
 })
 }}}
-----
-==== SELECT_FORMATS ====
+=== SELECT_FORMATS ===
 Set different Options for selecting elements from the !FileBrowser.
 {{{
 SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
@@ -105,14 +98,12 @@ SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
     'file': ['Folder','Image','Document',],
 })
 }}}
-----
-==== SAVE FULL_URL ===
+=== SAVE FULL_URL ==
 True to save the URL including MEDIA_URL to your model fields or False (default) to save path relative to MEDIA_URL.
 {{{
 SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
 }}}
-----
-==== VERSIONS_BASEDIR & VERSIONS ===
+=== VERSIONS_BASEDIR & VERSIONS ==
 {{{
 VERSIONS_BASEDIR = getattr(settings, 'FILEBROWSER_VERSIONS_BASEDIR', '_versions_')
 }}}
@@ -127,14 +118,12 @@ VERSIONS = getattr(settings, "FILEBROWSER_VERSIONS", {
     'croppedthumbnail': {'verbose_name': 'Cropped Thumbnail (140x140px)', 'width': 140, 'height': 140, 'opts': 'crop'},
 })
 }}}
-----
-==== ADMIN_VERSIONS & ADMIN_THUMBNAIL ====
+=== ADMIN_VERSIONS & ADMIN_THUMBNAIL ===
 {{{
 ADMIN_VERSIONS = ['thumbnail','small', 'medium','big']
 ADMIN_THUMBNAIL = 'fb_thumb'
 }}}
-----
-==== OPTIONAL SETTINGS ====
+=== OPTIONAL SETTINGS ===
 *STRICT_PIL:* If set to True, then !FileBrowser will not try to import a mis-installed PIL.
 {{{
 STRICT_PIL = getattr(settings, 'FILEBROWSER_STRICT_PIL', False)
