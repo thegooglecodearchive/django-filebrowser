@@ -49,7 +49,7 @@ MEDIA_URL = getattr(settings, "FILEBROWSER_MEDIA_URL", settings.MEDIA_URL)
 }}}
 ----
 ==== DIRECTORY ====
-Main FileBrowser Directory. This has to be a directory within MEDIA_ROOT. Leave empty in order to browse all files under MEDIA_ROOT.
+Main !FileBrowser Directory. This has to be a directory within MEDIA_ROOT. Leave empty in order to browse all files under MEDIA_ROOT.
 {{{
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
 }}}
@@ -74,28 +74,19 @@ URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", s
 }}}
 Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
 ----
-==== URL_TINYMCE ====
-The URL to your TinyMCE Installation.
-{{{
-URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
-}}}
-Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
-----
-==== PATH_SERVER ====
-The server-path to media-files. This is the initial/root server-path for the !FileBrowser.
-{{{
-PATH_SERVER = getattr(settings, "FILEBROWSER_PATH_SERVER", os.path.join(settings.MEDIA_ROOT, 'uploads'))
-}}}
-Note: When you set URL_WWW to settings.MEDIA_ROOT you can use all your media-files with the !FileBrowser. Nevertheless, you may want to limit this to a subpath of settings.MEDIA_ROOT or a seperate media-server.
-
-*Important: If you change this setting, you should also change URL_WWW.*
-----
 ==== PATH_FILEBROWSER_MEDIA ====
 The server-path to your filebrowser media-files.
 {{{
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
 Note: You have to change this setting, if you install the media-files of the !FileBrowser outside your admin-media directory.
+----
+==== URL_TINYMCE ====
+The URL to your TinyMCE Installation.
+{{{
+URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
+}}}
+Note: You have to change this setting, if you install TinyMCE outside your admin-media directory.
 ----
 ==== PATH_TINYMCE ====
 The server-path to your TinyMCE Installation.
@@ -112,11 +103,10 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Image':['.jpg', '.jpeg', '.gif','.png','.tif','.tiff'],
     'Video':['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
     'Document':['.pdf','.doc','.rtf','.txt','.xls','.csv'],
-    'Sound':['.mp3','.mp4','.wav','.aiff','.midi'],
+    'Sound':['.mp3','.mp4','.wav','.aiff','.midi','.m4p'],
     'Code':['.html','.py','.js','.css']
 })
 }}}
-Note: With using the !FileBrowse-Field, you are able to define specific "allowed extensions" for each field, see [installationfilebrowsefield Using the FileBrowse-Field].
 ----
 ==== SELECT_FORMATS ====
 Set different Options for selecting elements from the !FileBrowser.
