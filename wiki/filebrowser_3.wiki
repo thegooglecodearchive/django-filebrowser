@@ -231,10 +231,20 @@ Get the URL for a version of an existing Image according to the predefined VERSI
 {{{
 {% version field_name version_prefix %}
 }}}    
-Use {% version my_image 'medium' %} in order to display the medium-size version of an Image stored in a field name my_image. version_prefix can be a string or a variable. If version_prefix is a string, use quotes.
+Given our Publication-Model form abeove, use
+{{{
+{% version publication.image.path 'medium' %}
+}}}
+in order to display the URL to your medium-size version.
+
+Note: version_prefix can either be a string or a variable. If version_prefix is a string, use quotes.
 === version_object ===
-Returns a context variable 'version_object'.
+Sometimes getting the URL to your version may not be enough. In this case, use version_object in order to return a !FileObject.
 {{{
 {% version_object field_name version_prefix %}
 }}}    
-Use {% version_object my_image 'medium' %} in order to retrieve the medium version of an Image stored in a field name my_image. version_prefix can be a string or a variable. if version_prefix is a string, use quotes.
+With our Publication-Model, use 
+{{{
+{% version_object my_image 'medium' %} 
+}}}
+in order to retrieve the !FileObject for the medium version.
