@@ -58,21 +58,18 @@ The URL to your Admin Index-Site.
 {{{
 URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
 }}}
-=== URL_FILEBROWSER_MEDIA & PATH_FILEBROWSER_MEDIA ===
-The URL and Path to your filebrowser media-files.
+=== FILEBROWSER_MEDIA & TINYMCE_MEDIA ===
+The URL and Path to your !FileBrowser media-files. You have to change this settings, if you install the media-files of the !FileBrowser outside your admin-media directory.
 {{{
 URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_MEDIA", settings.ADMIN_MEDIA_PREFIX + "filebrowser/")
 }}}
-Note: You have to change this settings, if you install the media-files of the !FileBrowser outside your admin-media directory.
-=== URL_TINYMCE & PATH_TINYMCE ===
-The URL to your TinyMCE Installation.
+The URL to your TinyMCE Installation. You have to change this settings, if you install TinyMCE outside your admin-media directory.
 {{{
 URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", settings.ADMIN_MEDIA_PREFIX + "tinymce/jscripts/tiny_mce/")
 }}}
-Note: You have to change this settings, if you install TinyMCE outside your admin-media directory.
-=== EXTENSIONS ===
+=== EXTENSIONS & SELECT_FORMATS ===
 Allowed Extensions for File Upload. Please be aware that there are Icons for the default extension settings. If you rename "Sound" to "Music", you also have to rename the Sound-Icon within the img-directory.
 {{{
 EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
@@ -84,7 +81,6 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
     'Code':['.html','.py','.js','.css']
 })
 }}}
-=== SELECT_FORMATS ===
 Set different Options for selecting elements from the !FileBrowser.
 {{{
 SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
@@ -96,11 +92,6 @@ SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
     'image': ['Image'],
     'file': ['Folder','Image','Document',],
 })
-}}}
-=== SAVE FULL_URL ==
-True to save the URL including MEDIA_URL to your model fields or False (default) to save path relative to MEDIA_URL.
-{{{
-SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
 }}}
 === VERSIONS_BASEDIR & VERSIONS ==
 {{{
@@ -117,12 +108,15 @@ VERSIONS = getattr(settings, "FILEBROWSER_VERSIONS", {
     'croppedthumbnail': {'verbose_name': 'Cropped Thumbnail (140x140px)', 'width': 140, 'height': 140, 'opts': 'crop'},
 })
 }}}
-=== ADMIN_VERSIONS & ADMIN_THUMBNAIL ===
 {{{
 ADMIN_VERSIONS = ['thumbnail','small', 'medium','big']
 ADMIN_THUMBNAIL = 'fb_thumb'
 }}}
 === OPTIONAL SETTINGS ===
+*SAVE_FULL_URL: *True to save the URL including MEDIA_URL to your model fields or False (default) to save path relative to MEDIA_URL.
+{{{
+SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
+}}}
 *STRICT_PIL:* If set to True, then !FileBrowser will not try to import a mis-installed PIL.
 {{{
 STRICT_PIL = getattr(settings, 'FILEBROWSER_STRICT_PIL', False)
