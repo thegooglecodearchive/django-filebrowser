@@ -188,5 +188,7 @@ class Publication(models.Model):
 The Thumbnail will automatically be generated. Clicking on the Thumbnail below the !FileBrowseField will open the Image in a new window/tab.
 
 ----
-=== Templatetags ===
+= Templatetags =
 New in Version 3.0: Instead of Generating Image-Versions on Upload, the Versions are now generated "on the fly" with using Templatetags.
+
+Basically, you have two different tags to choose from: *version* and *version_object*.
