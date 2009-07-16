@@ -1,11 +1,18 @@
 This page is a preliminary documentation on Version 3.0 of the !FileBrowser. The behaviour can slightly change within the next couple of weeks.<br><br>
 ----
 <br>
+=Release Notes=
+Almost everything has changed with this Version: URL configuration, the new !FileObject, the !FileBrowseField attributes (and behaviour), a new (and improved) Version System and so on. Just too much to list here ...
+<br><br>
+----
+<br>
 =Requirements=
 
     * Django 1.0+
-    * PIL (Python Imaging Library), see http://www.pythonware.com/products/pil/ 
-<br>
+    * PIL (Python Imaging Library), see http://www.pythonware.com/products/pil/
+
+Note: sorl-thumbnail is no longer required.
+<br><br>
 ----
 <br>
 =Basic Installation=
