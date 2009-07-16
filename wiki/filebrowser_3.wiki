@@ -1,0 +1,26 @@
+This page is a preliminary documentation on Version 3.0 of the !FileBrowser. 
+
+=Basic Installation=
+
+  # *Install the !FileBrowser*
+    Install the !FileBrowser anywhere on your python-path. I´m personally using the project-directory.
+{{{
+svn checkout http://django-filebrowser.googlecode.com/svn/branches/filebrowser_3/filebrowser/ filebrowser
+}}}
+  # *Copy Media*
+    Copy the folder /media to your media-directory and change URL_FILEBROWSER_MEDIA (in fb_settings.py) accordingly.
+  # *Add filebrowser to your INSTALLED APPS.*
+    Open your projects settings-file (settings.py) and add the filebrowser to your INSTALLED APPS. 
+  # *Change fb_settings.py*
+    Either change fb_settings.py or overwrite the filebrowser settings in your project settings-file (settings.py). See "Available Settings".
+  # *Change your urls.py*
+    Add the following line BEFORE the admin-urls:
+{{{
+(r'^admin/filebrowser/', include('filebrowser.urls')),
+}}}
+  # *Add the !FileBrowser to your Admin Indexpage*
+    Edit /templates/admin/index.html. Add this code BEFORE {% for app in app_list %} ... {% endfor %}:
+{{{
+{% include "filebrowser/append.html" %}
+}}}
+  # That's it.
