@@ -197,6 +197,8 @@ class Publication(models.Model):
 The Thumbnail will automatically be generated. Clicking on the Thumbnail below the !FileBrowseField will open the Image in a new window/tab.
 
 === !FileBrowseField in Templates ===
+When using a !FileBrowseField, you´ll get a !FileObject back (see !FileObject).
+
 With the above Publication-Model, you can use
 {{{
 {{ publication.image }}
@@ -205,7 +207,7 @@ to output the contents of your image-field. For example, this could result in so
 
 Now, if you want to actually display the Image, you write:
 {{{
-<img src="{{ publication.image }}" />
+<img src="{{ publication.image }}" class="myimageclass" width="{{ publication.image.image_width }}" />
 }}}
 <br><br>
 ----
