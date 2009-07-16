@@ -112,9 +112,37 @@ EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
 Set different Options for selecting elements from the !FileBrowser.
 {{{
 SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
-    'File':['Folder','Document'],
-    'Image':['Image'],
-    'Media':['Video','Sound']
+    'File': ['Folder','Document',],
+    'Image': ['Image'],
+    'Media': ['Video','Sound'],
+    'Document': ['Document'],
+    # for TinyMCE we also have to define lower-case items
+    'image': ['Image'],
+    'file': ['Folder','Image','Document',],
+})
+}}}
+----
+==== SAVE FULL_URL ===
+True to save the URL including MEDIA_URL to your model fields or False (default) to save path relative to MEDIA_URL.
+{{{
+SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
+}}}
+----
+==== VERSIONS_BASEDIR ===
+{{{
+VERSIONS_BASEDIR = getattr(settings, 'FILEBROWSER_VERSIONS_BASEDIR', '_versions_')
+}}}
+----
+==== VERSIONS ====
+{{{
+VERSIONS = getattr(settings, "FILEBROWSER_VERSIONS", {
+    'fb_thumb': {'verbose_name': 'Admin Thumbnail', 'width': 60, 'height': 60, 'opts': 'crop upscale'},
+    'thumbnail': {'verbose_name': 'Thumbnail (140px)', 'width': 140, 'height': '', 'opts': ''},
+    'small': {'verbose_name': 'Small (300px)', 'width': 300, 'height': '', 'opts': ''},
+    'medium': {'verbose_name': 'Medium (460px)', 'width': 460, 'height': '', 'opts': ''},
+    'big': {'verbose_name': 'Big (620px)', 'width': 620, 'height': '', 'opts': ''},
+    'cropped': {'verbose_name': 'Cropped (60x60px)', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'croppedthumbnail': {'verbose_name': 'Cropped Thumbnail (140x140px)', 'width': 140, 'height': 140, 'opts': 'crop'},
 })
 }}}
 ----
@@ -130,72 +158,6 @@ see http://mail.python.org/pipermail/image-sig/1999-August/000816.html
 IMAGE_MAXBLOCK = getattr(settings, 'FILEBROWSER_IMAGE_MAXBLOCK', 1024*1024)
 }}}
 ----
-==== THUMB_PREFIX ====
-The prefix for your thumbnails. If you have an Image "myimage.jpg", your thumbnail will be "thumb_myimage.jpg" by default.
-{{{
-THUMB_PREFIX = getattr(settings, 'FILEBROWSER_THUMB_PREFIX', 'thumb_')
-}}}
-Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Because of the low quality, it´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
-----
-==== THUMBNAIL_SIZE ====
-The size of your thumbnails for the Admin-Interface.
-{{{
-THUMBNAIL_SIZE = getattr(settings, 'FILEBROWSER_THUMBNAIL_SIZE', '50x50')
-}}}
-Note: This Thumbnail is for diplaying your Image within the Admin-Interface. Because of the low quality, it´s not intended to use this Thumbnail on your Website (use "Image Generator" instead).
-
-For more on this subject, see the PIL Documentation (http://www.pythonware.com/library/pil/handbook/image.htm).
-----
-==== USE_IMAGE_GENERATOR ====
-Whether or not to use the !ImageGenerator. When this is *True*, you´ll get a checkbox called "Use Image Generator" with every Upload-Field. Moreover, every Image will have a button "Generate Images" to generate Image versions (this is useful, if Images are uploaded using FTP and not the !FileBrowser - you can upload Images using FTP and generate the Image Versions afterwards).
-{{{
-USE_IMAGE_GENERATOR = getattr(settings, 'FILEBROWSER_USE_IMAGE_GENERATOR', True)
-}}}
-----
-==== IMAGE_GENERATOR_DIRECTORY ====
-The postfix for your "Image Versions"-directory. If you Upload an Image called "myimage.jpg", your versions-directory will be called "myimage_jpg_versions" by default.
-{{{
-IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIRECTORY', '_versions')
-}}}
-----
-==== IMAGE_GENERATOR_LANDSCAPE ====
-A list of Images to generate in the format _(prefix, image width)_.
-{{{
-IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
-}}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail", "small" and "medium". You won´t get the "big"-version.
-----
-==== IMAGE_GENERATOR_PORTRAIT ====
-A list of Images to generate in the format _(prefix, image height)_.
-{{{
-IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
-}}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 540px, you´ll get "thumbnail", "small" and "medium". You won´t get the "big"-version.
-----
-==== IMAGE_CROP_GENERATOR ====
-A list of Images to generate in the format _(prefix, image width, image height)_.
-{{{
-IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
-}}}
-Note: Only Images which are smaller than your Original Image will be generated. Example: If you upload an Image with a width of 100px, you´ll get "cropped". You won´t get the "croppedthumbnail"-version.
-----
-==== CHECK_EXISTS ====
-When accessing !FilebrowserField.landscape.xxx !FilebrowserField.portrait.xxx, check if the file actually exists. Set to True to always check ...
-{{{
-CHECK_EXISTS = getattr(settings, 'FILEBROWSER_CHECK_EXISTS', True)
-}}}
-----
-==== FORCE_GENERATOR ====
-Force the use of the image generator each time a file is uploaded via !FileBrowser.
-{{{
-FORCE_GENERATOR = getattr(settings, 'FILEBROWSER_FORCE_GENERATOR', False)
-}}}
-----
-==== FORCE_GENERATOR_RUN ====
-If set True, Image Generator will copy the image if the dimensions are smaller than the specified dimensions.
-{{{
-FORCE_GENERATOR_RUN = getattr(settings, 'FILEBROWSER_FORCE_GENERATOR_RUN', False)
-}}}
 ----
 ==== STRICT_PIL ====
 If set to True, then !FileBrowser will not try to import a mis-installed PIL.
