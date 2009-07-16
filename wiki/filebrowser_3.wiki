@@ -184,6 +184,11 @@ With the above Publication-Model, you can use
 {{ publication.image }}
 }}}
 to output the contents of your image-field. For example, this could result in something like "uploads/images/myimage.jpg".
+
+Now, if you want to actually display the Image, you write:
+{{{
+<img src="{{ publication.image }}" />
+}}}
 <br><br>
 ----
 <br>
