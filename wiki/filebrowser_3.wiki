@@ -196,10 +196,10 @@ from filebrowser.fields import FileBrowseField
 class Publication(models.Model):
     ...
     image = FileBrowseField("Image", max_length=200, blank=True, null=True)
-    image_initialdir = FileBrowseField("Image (Initial Directory)", max_length=200, directory="/filebrowser_test/", blank=True, null=True)
+    image_initialdir = FileBrowseField("Image (Initial Directory)", max_length=200, directory="images/", blank=True, null=True)
     image_extensions = FileBrowseField("Image (Extensions)", max_length=200, extensions=['.jpg'], help_text="Only jpg-Images allowed.", blank=True, null=True)
     image_format = FileBrowseField("Image (Format)", max_length=200, format='Image', blank=True, null=True)
-    pdf = FileBrowseField("PDF", max_length=200, directory="/filebrowser_test/", extensions=['.pdf'], format='Document', blank=True, null=True)
+    pdf = FileBrowseField("PDF", max_length=200, directory="documents/", extensions=['.pdf'], format='Document', blank=True, null=True)
     ...
 }}}
 
@@ -207,11 +207,11 @@ class Publication(models.Model):
   * *max_length*
     Since the !FileBrowseField is basically a !CharField, you have to define max_length.
   * *directory*
-    Server Directory shown when the User clicks on the !FileBrowser-Icon beneath the Input Field. This is a subdirectory of DIRECTORY (see fb_settings.py). If you define MEDIA_ROOT as "/var/www/vhosts/mysite.com/media/" and DIRECTORY as "uploads/" and initial_directory as "blog/", you´ll see the server-directory "/var/www/vhosts/mysite.com/media/uploads/blog/". If you don´t define initial_directory (or define initial_directory as ""), you´ll browse DIRECTORY. If you don´t define DIRECTORY as well, you´ll browse MEDIA_ROOT. Note that you are NOT able to see a directory above MEDIA_ROOT.
+    Subdirectory of DIRECTORY (see fb_settings.py). If DIRECTORY is not defined, subdirectory of MEDIA_ROOT. Do not prepend a slash.
   * *extensions*
-    List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. If you want to allow every possible file-extension, remove the attribute. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
+    List of Extensions allowed for this Field. Users will get an error message ("Extension not allowed.") if the selected File has an extension not listed here. Extensions are automatically converted to lowercase - therefore, you don´t have to define '.JPG' and '.jpg', but only '.jpg'.
   * *format*
-    Use this attribute to restrict selection to specific filetypes. E.g., if you use *format='Image'*, only Images can be selected from the !FileBrowser. Note: Image has to befined with SELECT_FORMATS.
+    Use this attribute to restrict selection to specific filetypes. E.g., if you use *format='Image'*, only Images can be selected from the !FileBrowser. Note: The Format has to be defined within SELECT_FORMATS.
 
 === Image Preview ===
 The Thumbnail will automatically be generated. Clicking on the Thumbnail below the !FileBrowseField will open the Image in a new window/tab.
