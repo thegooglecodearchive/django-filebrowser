@@ -1,4 +1,3 @@
-#labels Featured
 =Using the !FileBrowser with WYMEditor=
 
 From my point of view, WYMEditor gets it right for about 97.3%. Not being able to insert/edit DIVs and SPANs is horrible though. The lack of a fullscreen-mode is another drawback. And since selected CLASSES are not highlighted, I don´t think customers will be satisfied ...
