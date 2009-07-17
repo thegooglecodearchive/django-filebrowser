@@ -14,6 +14,12 @@ A lot has changed with Version 3.0 of the !FileBrowser. Here´s a list with the 
   * DEBUG-Mode in order to display !FileObjects in the Admin-Interface.
   * Some settings have changed (see Available Settings).
   * New Version-settings should be more flexible.
+  * Code is much cleaner (although far from hugely satisfying).
+
+What we like to implement, but didn´t make with this version:
+  * Progress Bar Upload Handler.
+  * Traversing Directories when Searching for Filenames.
+  * Actions (like multiple delete).
 <br>
 ----
 <br>
