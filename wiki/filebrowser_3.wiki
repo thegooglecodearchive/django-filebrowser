@@ -251,10 +251,19 @@ Note: version_prefix can either be a string or a variable. If version_prefix is 
 === version_object ===
 Sometimes getting the URL to your version may not be enough. In this case, use version_object in order to return a !FileObject.
 {{{
-{% version_object field_name version_prefix %}
+{% version_object field_name version_prefix as variable %}
 }}}    
 With our Publication-Model, use 
 {{{
-{% version_object my_image 'medium' %} 
+{% version_object my_image 'medium' as version_medium %} 
 }}}
 in order to retrieve the !FileObject for the medium version.
+
+With the !FileObject in your Template-Context you can now type (for example):
+{{{
+{{ version_medium.image_orientation }}
+}}}
+
+=== Behind the Scenes ===
+With either using the version-tag or the version_object-tag, the Image-version will be generated "on the fly" if the version doesn´t already exist OR if the original Image is newer than the version.
+This means that if you´d like to update an Image, you just overwrite the original Image - the versions will be re-generated automatically (as you request them within your template).
