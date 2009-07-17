@@ -80,15 +80,6 @@ Main !FileBrowser Directory. This has to be a directory within MEDIA_ROOT. Leave
 {{{
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
 }}}
-=== URL_ADMIN & URL_HOME ===
-The !FileBrowser Admin-URL. If you change this URL, you also have to change the file urls.py.
-{{{
-URL_ADMIN = getattr(settings, "FILEBROWSER_URL_ADMIN", '/admin/filebrowser/')
-}}}
-The URL to your Admin Index-Site.
-{{{
-URL_HOME = getattr(settings, "FILEBROWSER_URL_HOME", '/admin/')
-}}}
 === FILEBROWSER_MEDIA & TINYMCE_MEDIA ===
 The URL and Path to your !FileBrowser media-files. You have to change this settings, if you install the media-files of the !FileBrowser outside your admin-media directory.
 {{{
