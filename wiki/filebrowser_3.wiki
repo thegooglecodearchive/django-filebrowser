@@ -14,7 +14,7 @@ A lot has changed with Version 3.0 of the !FileBrowser. Here´s a list with the 
   * DEBUG-Mode in order to display !FileObjects in the Admin-Interface.
   * Some settings have changed (see Available Settings).
   * New Version-settings should be more flexible.
-<br><br>
+<br>
 ----
 <br>
 =Requirements=
