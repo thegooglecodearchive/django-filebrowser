@@ -2,7 +2,18 @@ This page is a preliminary documentation on Version 3.0 of the !FileBrowser. The
 ----
 <br>
 =Release Notes=
-Almost everything has changed with this Version: URL configuration, the new !FileObject, the !FileBrowseField attributes (and behaviour), a new (and improved) Version System and so on. Just too much to list here ...
+A lot has changed with Version 3.0 of the !FileBrowser. Here´s a list with the most important changes:
+  * New !FileObject.
+  * Versions are generated "on the fly" - generating Versions on Upload is no longer necessary/possible.
+  * New URL configuration: Directories are now passed via query-string. So, the restriction for folder-names (DISALLOWED_FOLDER_NAMES) is gone.
+  * !FileBrowseField returns a !FileObject (instead of a string).
+  * New attribute "format" for !FileBrowseField. With using "format", it´s possible to limit the selection to different filetypes.
+  * Versions/Thumbnails can be stored in a seperate directory.
+  * Overwrite files on Upload (filename is checked via ajax).
+  * sorl-thumbnail is no longer needed.
+  * DEBUG-Mode in order to display !FileObjects in the Admin-Interface.
+  * Some settings have changed (see Available Settings).
+  * New Version-settings should be more flexible.
 <br><br>
 ----
 <br>
