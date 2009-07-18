@@ -175,7 +175,7 @@ Any !FileObject has the following attributes:
   * *url_relative* (=path)
   * *url_full* (including MEDIA__URL)
   * *url_save* (URL used for the !FileBrowseField)
-  * *url_thumbnail* (URL for the Admin-Thumbnail)
+  * *url_thumbnail* (Full URL for the Admin-Thumbnail)
 
 An Image has additional attributes:
   * *dimensions* (tuple)
