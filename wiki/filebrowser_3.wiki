@@ -163,25 +163,28 @@ New in Version 3.0: When browsing a directory on the server, you get a !FileObje
 
 Any !FileObject has the following attributes:
   * *filename*
-  * *extension*
-  * *filetype*
-  * *filesize*
-  * *date*
+  * *filetype* (as defined in EXTENSIONS)
+  * *filesize* (output with filesizeformat)
+  * *extension* (as defined in EXTENSIONS)
+  * *time* (getmtime)
   * *datetime* (datetime object)
-  * *url_thumbnail*
 
-
-  * *path* (relative to MEDIA_ROOT)  
+  * *path* (relative to MEDIA_ROOT)
+  * *path_relative* (=path)
   * *path_full* (including MEDIA_ROOT)
-  * *url* (just for consistency, because relative url = path)
+  * *url_relative* (=path)
   * *url_full* (including MEDIA__URL)
   * *url_save* (URL used for the !FileBrowseField)
+  * *url_thumbnail* (URL for the Admin-Thumbnail)
 
 An Image has additional attributes:
   * *dimensions* (tuple)
   * *orientation* (either "landscape" or "portrait")
-  * *width*
-  * *height*
+  * *width* (in px)
+  * *height* (in px)
+
+A Folder has additional attributes:
+  * *is_empty* (True/False)
 
 Set DEBUG to True in order to see the !FileObject values.
 <br><br>
