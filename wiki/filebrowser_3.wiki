@@ -137,7 +137,7 @@ ADMIN_THUMBNAIL = 'fb_thumb'
 === OPTIONAL SETTINGS ===
 *SAVE_FULL_URL: *True to save the URL including MEDIA_URL to your model fields or False (default) to save path relative to MEDIA_URL.
 {{{
-SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
+SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", True)
 }}}
 *STRICT_PIL:* If set to True, then !FileBrowser will not try to import a mis-installed PIL.
 {{{
