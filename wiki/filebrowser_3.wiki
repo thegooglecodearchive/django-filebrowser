@@ -274,7 +274,7 @@ in order to retrieve the !FileObject for the medium version.
 
 With the !FileObject in your Template-Context you can now type (for example):
 {{{
-{{ version_medium.image_orientation }}
+{{ version_medium.width }}
 }}}
 
 A complete (and more complex) example #001:
