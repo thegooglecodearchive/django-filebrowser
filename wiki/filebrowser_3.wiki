@@ -241,7 +241,18 @@ More complicated, if you want to display "Landscape" Images only (I know, bad ex
 <img src="{{ publication.image }}" class="ImageClass" />
 {% endifequal %}
 }}}
-<br><br>
+
+=== Showing Thumbnail in the Changelist ===
+If you want to show a Thumbnail in the Changelist, you can define a Model-/Admin-Method:
+{{{
+def image_thumbnail(self):
+    if self.image:
+        return '<img src="%s" />' % self.image.url_thumbnail
+    else:
+        return ""
+image_thumbnail.allow_tags = True
+}}}
+<br>
 ----
 <br>
 = Templatetags =
