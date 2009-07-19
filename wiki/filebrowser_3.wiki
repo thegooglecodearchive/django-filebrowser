@@ -16,6 +16,9 @@ A lot has changed with Version 3.0 of the !FileBrowser. Here´s a list with the 
   * New Version-settings should be more flexible.
   * Code is much cleaner (although far from hugely satisfying).
 
+Still TODO:
+  * Use !FileBrowser Models in order to define every Model-Field which can include a File. These Fields will then be searched when a File is renamed or deleted.
+
 What we like to implement, but didn´t make with this version:
   * Progress Bar Upload Handler.
   * Traversing Directories when Searching for Filenames.
