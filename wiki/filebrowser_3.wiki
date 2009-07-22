@@ -169,7 +169,7 @@ Any !FileObject has the following attributes:
   * *filetype* (as defined in EXTENSIONS)
   * *filesize* (output with filesizeformat)
   * *extension* (as defined in EXTENSIONS)
-  * *time* (getmtime)
+  * *date* (getmtime)
   * *datetime* (datetime object)
 
   * *path* (relative to MEDIA_ROOT)
