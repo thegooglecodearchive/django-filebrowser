@@ -305,3 +305,9 @@ A complete (and more complex) example #001:
 === Behind the Scenes ===
 With either using the version-tag or the version_object-tag, the Image-version will be generated "on the fly" if the version doesn´t already exist OR if the original Image is newer than the version.
 This means that if you´d like to update an Image, you just overwrite the original Image - the versions will be re-generated automatically (as you request them within your template).
+<br>
+----
+<br>
+= Notes =
+When you rename or delete a File on your server, you have to be cautious: the Path/URL for this File (or the Path/URL for a Version, if it is an Image) could be stored in your database with either a !FileBrowseField or within a !TextField.
+E.g., if you rename a File, the stored Path/URL is not correct anymore!
