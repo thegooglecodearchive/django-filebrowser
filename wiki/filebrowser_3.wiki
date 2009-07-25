@@ -261,6 +261,11 @@ image_thumbnail.allow_tags = True
 = Templatetags =
 New in Version 3.0: Instead of Generating Image-Versions on Upload, the Versions are now generated "on the fly" with using Templatetags.
 
+First you need to load the templatetags with
+{{{
+{% load fb_versions %}
+}}}
+
 You have two different tags to choose from: *version* and *version_object*.
 
 === version ===
