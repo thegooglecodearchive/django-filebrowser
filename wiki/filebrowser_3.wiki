@@ -296,6 +296,10 @@ With the !FileObject in your Template-Context you can now type (for example):
 {{{
 {{ version_medium.width }}
 }}}
+or just
+{{{
+<img src="{{ version_medium }}" />
+}}}
 
 A complete (and more complex) example #001:
 {{{
