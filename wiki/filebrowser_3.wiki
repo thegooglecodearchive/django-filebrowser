@@ -318,6 +318,52 @@ This means that if you´d like to update an Image, you just overwrite the origin
 <br>
 ----
 <br>
+= Signals =
+The !FileBrowser sends to signals when uploading a File:
+  * *upload_started*
+    This Signal is sent _before_ a File is uploaded to the Server.<br>
+    kwargs: folder, path, file
+  * *upload_finished*
+    This Signal is sent _after_ a File has been uploaded to the Server.<br>
+    kwargs: folder, path, file
+
+Example for using these Signals:
+{{{
+from filebrowser.views import upload_started, upload_finished
+
+
+def pre_upload_callback(sender, **kwargs):
+    """
+    Receiver function called each time an upload starts.
+    kwargs: folder, path, file
+    """
+    print "Pre Upload Callback"
+    print "kwargs:", kwargs
+    print "Folder:", kwargs['folder']
+    print "Path:", kwargs['path']
+    print "File:", kwargs['file']
+upload_started.connect(pre_upload_callback)
+
+
+def post_upload_callback(sender, **kwargs):
+    """
+    Receiver function called each time an upload has finished.
+    kwargs: folder, path, file
+    """
+    print "Post Upload Callback"
+    print "kwargs:", kwargs
+    print "Folder:", kwargs['folder']
+    print "Path:", kwargs['path']
+    print "File:", kwargs['file']
+    # You can use all attributes available with the FileObject
+    # This is just an example ...
+    print "Filesize:", kwargs['file'].filesize
+    print "Orientation:", kwargs['file'].orientation
+    print "Extension:", kwargs['file'].extension
+upload_finished.connect(post_upload_callback)
+}}}
+----
+<br>
 = Notes =
 When you rename or delete a File on your server, you have to be cautious: the Path/URL for this File (or the Path/URL for a Version, if it is an Image) could be stored in your database with either a !FileBrowseField or within a !TextField.
 E.g., if you rename a File, the stored Path/URL is not correct anymore!
