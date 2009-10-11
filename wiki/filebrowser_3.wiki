@@ -320,48 +320,55 @@ This means that if you´d like to update an Image, you just overwrite the origin
 <br>
 = Signals =
 The !FileBrowser sends a couple of different signals:
-  * *filebrowser_upload_started*
-    This Signal is sent _before_ a File is uploaded to the Server.<br>
-    kwargs: folder, path, file
-  * *filebrowser_upload_finished*
-    This Signal is sent _after_ a File has been uploaded to the Server.<br>
-    kwargs: folder, path, file
-  * *filebrowser_delete*
+  * *filebrowser_pre_upload*
+    This Signal is sent _before_ a an Upload starts.<br>
+    kwargs: path, file
+  * *filebrowser_post_upload*
+    This Signal is sent _after_ an Upload has finished.<br>
+    kwargs: path, file
+  * *filebrowser_pre_delete*
+    This Signal is sent _before_ an Item (File, Folder) is deleted.<br>
+    kwargs: path, filename
+  * *filebrowser_post_delete*
+    This Signal is sent _after_ an Item (File, Folder) has been deleted.<br>
+    kwargs: path, filename
+  * *filebrowser_pre_createdir*
+    This Signal is sent _before_ a new Folder is created.<br>
+    kwargs: path, dirname
+  * *filebrowser_post_createdir*
+    This Signal is sent _after_ a new Folder has been created.<br>
+    kwargs: path, dirname
+  * *filebrowser_pre_rename*
+    This Signal is sent _before_ an Item (File, Folder) is renamed.<br>
+    kwargs: path, filename
+  * *filebrowser_post_rename*
+    This Signal is sent _after_ an Item (File, Folder) has been renamed.<br>
+    kwargs: path, filename
 
 Example for using these Signals:
 {{{
-from filebrowser.views import upload_started, upload_finished
-
+from filebrowser.views import filebrowser_pre_upload, filebrowser_post_upload
 
 def pre_upload_callback(sender, **kwargs):
     """
-    Receiver function called each time an upload starts.
-    kwargs: folder, path, file
+    Receiver function called before an upload starts.
     """
     print "Pre Upload Callback"
     print "kwargs:", kwargs
-    print "Folder:", kwargs['folder']
-    print "Path:", kwargs['path']
-    print "File:", kwargs['file']
-upload_started.connect(pre_upload_callback)
-
+filebrowser_pre_upload.connect(pre_upload_callback)
 
 def post_upload_callback(sender, **kwargs):
     """
     Receiver function called each time an upload has finished.
-    kwargs: folder, path, file
     """
     print "Post Upload Callback"
     print "kwargs:", kwargs
-    print "Folder:", kwargs['folder']
-    print "Path:", kwargs['path']
-    print "File:", kwargs['file']
     # You can use all attributes available with the FileObject
     # This is just an example ...
     print "Filesize:", kwargs['file'].filesize
     print "Orientation:", kwargs['file'].orientation
     print "Extension:", kwargs['file'].extension
-upload_finished.connect(post_upload_callback)
+filebrowser_post_upload.connect(post_upload_callback)
 }}}
 ----
 <br>
