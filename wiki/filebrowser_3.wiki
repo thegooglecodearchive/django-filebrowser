@@ -319,13 +319,14 @@ This means that if you´d like to update an Image, you just overwrite the origin
 ----
 <br>
 = Signals =
-The !FileBrowser sends to signals when uploading a File:
-  * *upload_started*
+The !FileBrowser sends a couple of different signals:
+  * *filebrowser_upload_started*
     This Signal is sent _before_ a File is uploaded to the Server.<br>
     kwargs: folder, path, file
-  * *upload_finished*
+  * *filebrowser_upload_finished*
     This Signal is sent _after_ a File has been uploaded to the Server.<br>
     kwargs: folder, path, file
+  * *filebrowser_delete*
 
 Example for using these Signals:
 {{{
