@@ -33,3 +33,10 @@ Inserting Files (Images, Videos, Documents ...) to your Database/Models.
 
 [http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield.jpg http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield_thumb.jpg]<br>
 click to enlarge
+
+==Integration with !TinyMCE==
+
+Selecting a File from your Media-Server.
+
+[http://vonautomatisch.at/media/uploads/filebrowser/tinymce.jpg http://vonautomatisch.at/media/uploads/filebrowser/tinymce_thumb.jpg]<br>
+click to enlarge
