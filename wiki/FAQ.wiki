@@ -30,8 +30,3 @@ The !FileBrowsers root directory (as defined with MEDIA_ROOT + DIRECTOY) is a di
 
 The path to the !FileBrowser media-files is wrong. Check settings.py.
 ----
-*What new Features are planned?*
-
-  # It´d be nice to have an Upload Progress Bar.
-  # I´m thinking of defining a model for the !FileBrowser to store file-information and to allow tagging of images/documents. 
-----
