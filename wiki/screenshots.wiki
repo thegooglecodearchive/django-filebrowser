@@ -10,5 +10,12 @@ click to enlarge
 
 Browsing a Folder on the Media-Server
 
-[http://vonautomatisch.at/media/uploads/filebrowser/changelist_big.jpg http://vonautomatisch.at/media/uploads/filebrowser/changelist_thumb.jpg]<br>
+[http://vonautomatisch.at/media/uploads/filebrowser/changelist.jpg http://vonautomatisch.at/media/uploads/filebrowser/changelist_thumb.jpg]<br>
+click to enlarge
+
+==Upload==
+
+Uploading multiple files with Uploadify.
+
+[http://vonautomatisch.at/media/uploads/filebrowser/upload.jpg http://vonautomatisch.at/media/uploads/filebrowser/upload_thumb.jpg]<br>
 click to enlarge
