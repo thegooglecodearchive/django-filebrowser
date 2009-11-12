@@ -1,0 +1,53 @@
+= Signals =
+
+The !FileBrowser sends a couple of different signals:
+  * *filebrowser_pre_upload*
+    This Signal is sent _before_ a an Upload starts.<br>
+    kwargs: path, file
+  * *filebrowser_post_upload*
+    This Signal is sent _after_ an Upload has finished.<br>
+    kwargs: path, file
+  * *filebrowser_pre_delete*
+    This Signal is sent _before_ an Item (File, Folder) is deleted.<br>
+    kwargs: path, filename
+  * *filebrowser_post_delete*
+    This Signal is sent _after_ an Item (File, Folder) has been deleted.<br>
+    kwargs: path, filename
+  * *filebrowser_pre_createdir*
+    This Signal is sent _before_ a new Folder is created.<br>
+    kwargs: path, dirname
+  * *filebrowser_post_createdir*
+    This Signal is sent _after_ a new Folder has been created.<br>
+    kwargs: path, dirname
+  * *filebrowser_pre_rename*
+    This Signal is sent _before_ an Item (File, Folder) is renamed.<br>
+    kwargs: path, filename
+  * *filebrowser_post_rename*
+    This Signal is sent _after_ an Item (File, Folder) has been renamed.<br>
+    kwargs: path, filename
+
+Example for using these Signals:
+{{{
+from filebrowser.views import filebrowser_pre_upload, filebrowser_post_upload
+
+def pre_upload_callback(sender, **kwargs):
+    """
+    Receiver function called before an upload starts.
+    """
+    print "Pre Upload Callback"
+    print "kwargs:", kwargs
+filebrowser_pre_upload.connect(pre_upload_callback)
+
+def post_upload_callback(sender, **kwargs):
+    """
+    Receiver function called each time an upload has finished.
+    """
+    print "Post Upload Callback"
+    print "kwargs:", kwargs
+    # You can use all attributes available with the FileObject
+    # This is just an example ...
+    print "Filesize:", kwargs['file'].filesize
+    print "Orientation:", kwargs['file'].orientation
+    print "Extension:", kwargs['file'].extension
+filebrowser_post_upload.connect(post_upload_callback)
+}}}
