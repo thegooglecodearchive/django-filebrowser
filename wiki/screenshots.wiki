@@ -19,3 +19,10 @@ Uploading multiple files with Uploadify.
 
 [http://vonautomatisch.at/media/uploads/filebrowser/upload.jpg http://vonautomatisch.at/media/uploads/filebrowser/upload_thumb.jpg]<br>
 click to enlarge
+
+==FileBrowseField==
+
+Inserting Files (Images, Videos, Documents ...) to you Database.
+
+[http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield.jpg http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield_thumb.jpg]<br>
+click to enlarge
