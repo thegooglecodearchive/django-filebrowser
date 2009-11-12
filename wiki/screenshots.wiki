@@ -3,7 +3,7 @@
 
 Admin Index Site with !FileBrowser in the Navigation-Area.
 
-[http://vonautomatisch.at/media/uploads/filebrowser/index.jpg http://vonautomatisch.at/media/uploads/grappelli/index_thumb.jpg]<br>
+[http://vonautomatisch.at/media/uploads/filebrowser/index.jpg http://vonautomatisch.at/media/uploads/filebrowser/index_thumb.jpg]<br>
 click to enlarge
 
 ==Change List==
