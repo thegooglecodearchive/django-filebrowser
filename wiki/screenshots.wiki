@@ -13,6 +13,13 @@ Browsing a Folder on the Media-Server
 [http://vonautomatisch.at/media/uploads/filebrowser/changelist.jpg http://vonautomatisch.at/media/uploads/filebrowser/changelist_thumb.jpg]<br>
 click to enlarge
 
+==Image Versions==
+
+Different Versions of an Image.
+
+[http://vonautomatisch.at/media/uploads/filebrowser/versions.jpg http://vonautomatisch.at/media/uploads/filebrowser/versions_thumb.jpg]<br>
+click to enlarge
+
 ==Upload==
 
 Uploading multiple files with Uploadify.
@@ -22,7 +29,7 @@ click to enlarge
 
 ==FileBrowseField==
 
-Inserting Files (Images, Videos, Documents ...) to you Database.
+Inserting Files (Images, Videos, Documents ...) to your Database/Models.
 
 [http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield.jpg http://vonautomatisch.at/media/uploads/filebrowser/filebrowsefield_thumb.jpg]<br>
 click to enlarge
