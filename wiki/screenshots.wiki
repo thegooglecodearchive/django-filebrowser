@@ -1,18 +1,14 @@
 #labels Featured
-== Basic Installation ==
+==Main Admin Site==
 
-[http://sehmaschine.net/media/filebrowser/fb_1.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_1.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_2.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_2.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_3.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_3.jpg]
+Admin Index Site with !FileBrowser in the Navigation-Area.
 
-== File-Browse Field ==
+[http://vonautomatisch.at/media/uploads/filebrowser/index.jpg http://vonautomatisch.at/media/uploads/grappelli/index_thumb.jpg]<br>
+click to enlarge
 
-[http://sehmaschine.net/media/filebrowser/fb_4.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_4.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_5.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_5.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_6.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_6.jpg]
+==Change List==
 
-== !FileBrowser & TinyMCE ==
+Browsing a Folder on the Media-Server
 
-[http://sehmaschine.net/media/filebrowser/fb_7.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_7.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_8.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_8.jpg]
-[http://sehmaschine.net/media/filebrowser/fb_9.jpg http://sehmaschine.net/media/filebrowser/thumb_fb_9.jpg]
+[http://vonautomatisch.at/media/uploads/filebrowser/changelist_big.jpg http://vonautomatisch.at/media/uploads/filebrowser/changelist_thumb.jpg]<br>
+click to enlarge
