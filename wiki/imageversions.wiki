@@ -1,7 +1,6 @@
 = Using Image Versions =
 
-With the *Image Generator*, you are able to define different versions/sizes for Images. This enables you to save an Original Image on your Server while having different versions of that Image to automatically fit your websites Grid.
-
+With the *!FileBrowser*, you are able to define different versions/sizes for Images. This enables you to save an Original Image on your Server while having different versions of that Image to automatically fit your websites Grid.
 
 == How to use it ==
 
@@ -19,16 +18,18 @@ With the *Image Generator*, you are able to define different versions/sizes for 
     * *Cropped Thumbnail*: 140px/140px (2 Columns).
 
   * *Defining Image Versions*
-    Use fb_settings.py to define the name of your image-versions directory as well as the versions/sizes of your Images.
+    Use settings.py to define the name of your image-versions directory as well as the versions/sizes of your Images.
 {{{
-    IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIRECTORY', '_versions')
-    IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
-    IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", 
-    IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
+VERSIONS = getattr(settings, "FILEBROWSER_VERSIONS", {
+    'thumbnail': {'verbose_name': 'Thumbnail (140px)', 'width': 140, 'height': '', 'opts': ''},
+    'small': {'verbose_name': 'Small (300px)', 'width': 300, 'height': '', 'opts': ''},
+    'medium': {'verbose_name': 'Medium (460px)', 'width': 460, 'height': '', 'opts': ''},
+    'big': {'verbose_name': 'Big (620px)', 'width': 620, 'height': '', 'opts': ''},
+    'cropped': {'verbose_name': 'Cropped (60x60px)', 'width': 60, 'height': 60, 'opts': 'crop'},
+    'croppedthumbnail': {'verbose_name': 'Cropped Thumbnail (140x140px)', 'width': 140, 'height': 140, 'opts': 'crop'},
+})
 }}}
-  * Now you just Upload Images with the !FileBrowser (with "Using Image Generator") and every single Image will automatically fit *anywhere* on your Website. If you ever change the Grid of your Website or you want to change the size of your Images, just use a small python script to re-generate all Image Versions from the Original Image.
-
-  * *Please Note* that Versions will only be generated for Images larger than the specified Version. So, let´s say you Upload an Image with a width of 500px. Taken the Versions defined above, the "Big"-Version won´t be generated, because your Original Image (500px) is smaller than the Big-Version (620px).
+  * When browsing a folder, you see the Icon for Image-Versions on the left-hand side of each row. Clicking that Icon, you´ll see the different Versions available for an Image. 
 
 
 == Accessing Image-Versions in a Template ==
