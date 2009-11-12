@@ -6,23 +6,20 @@
 {{{
 svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ filebrowser
 }}}
-  # *Copy Media*
-    Copy the folder /media either to your admin media-directory (cp -R /path/to/filebrowser/media/filebrowser /path/to/your/admin/media/) or to your preferred media-directory (in this case, you have to edit URL_FILEBROWSER_MEDIA in fb_settings).
+  # *Copy/Symlink Media*
+    Copy the folder /media somewhere to your media-directory and change URL_FILEBROWSER_MEDIA (in fb_settings.py) accordingly.<br>
+    Alternatively, you may want to use a symlink from your media-directory.
   # *Add filebrowser to your INSTALLED APPS.*
     Open your projects settings-file (settings.py) and add the filebrowser to your INSTALLED APPS. 
-  # *Change fb_settings.py*
-    Either change fb_settings.py or overwrite the filebrowser settings in your project settings-file (settings.py). See "Available Settings".
-    Note: You do need an upload-directory. The default one is "uploads" inside your MEDIA_ROOT. Check URL_WWW and PATH_SERVER if you change this directory.
+  # *Change filebrowser settings.py*
+    Either change settings.py or overwrite the filebrowser settings in your project settings-file. See "Available Settings".
   # *Change your urls.py*
     Add the following line BEFORE the admin-urls:
 {{{
 (r'^admin/filebrowser/', include('filebrowser.urls')),
 }}}
-  # *Add the !FileBrowser to your Admin Indexpage*
-    Edit /templates/admin/index.html. Add this code BEFORE {% for app in app_list %} ... {% endfor %}:
-{{{
-{% include "filebrowser/append.html" %}
-}}}
+  # *Add the !FileBrowser to your Admin Navigation*
+    With using Grappelli, you can add the !FileBrowser to your Admin Index Page by changing the Sidebar-Navigation (the !FileBrowser is already part of the Grappelli fixtures).
   # That's it.
 
 ----
