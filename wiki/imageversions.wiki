@@ -1,0 +1,46 @@
+= Using Image Versions =
+
+With the *Image Generator*, you are able to define different versions/sizes for Images. This enables you to save an Original Image on your Server while having different versions of that Image to automatically fit your websites Grid.
+
+
+== How to use it ==
+
+  * *The Grid*
+    First you need to know which versions/sizes of an Image you´d like to use on your Website. Let´s say you´re having the following Grid for your Website:
+    * *12 Columns with 60px for each column and 20px margin. (which is a total of 940px).*
+
+  * *Image Versions/Sizes*
+    With this Grid, you could (for example) save these Image Versions:
+    * *Thumbnail*: 140px (2 Columns).
+    * *Small*: 300px (4 Columns); for Overview-Pages.
+    * *Medium*: 460px (6 Columns).
+    * *Big*: 620px (8 Columns). 
+    * *Cropped*: 60px/60px (1 Column).
+    * *Cropped Thumbnail*: 140px/140px (2 Columns).
+
+  * *Defining Image Versions*
+    Use fb_settings.py to define the name of your image-versions directory as well as the versions/sizes of your Images.
+{{{
+    IMAGE_GENERATOR_DIRECTORY = getattr(settings, 'FILEBROWSER_IMAGE_GENERATOR_DIRECTORY', '_versions')
+    IMAGE_GENERATOR_LANDSCAPE = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_LANDSCAPE", [('thumbnail_',140),('small_',300),('medium_',460),('big_',620)])
+    IMAGE_GENERATOR_PORTRAIT = getattr(settings, "FILEBROWSER_IMAGE_GENERATOR_PORTRAIT", 
+    IMAGE_CROP_GENERATOR = getattr(settings, "FILEBROWSER_IMAGE_CROP_GENERATOR", [('cropped_',60,60),('croppedthumbnail_',140,140)])
+}}}
+  * Now you just Upload Images with the !FileBrowser (with "Using Image Generator") and every single Image will automatically fit *anywhere* on your Website. If you ever change the Grid of your Website or you want to change the size of your Images, just use a small python script to re-generate all Image Versions from the Original Image.
+
+  * *Please Note* that Versions will only be generated for Images larger than the specified Version. So, let´s say you Upload an Image with a width of 500px. Taken the Versions defined above, the "Big"-Version won´t be generated, because your Original Image (500px) is smaller than the Big-Version (620px).
+
+
+== Accessing Image-Versions in a Template ==
+
+Within your Template, you could get the different Image-Versions by typing
+
+{{{
+    {% entry.image.medium %}
+}}}
+
+The Original Images is accessible with
+
+{{{
+    {% entry.image.original %}
+}}}
