@@ -13,25 +13,8 @@ English, German, Spanish, Catalan, Italian, Chinese (Simplified, Traditional), D
   * To update a language file, type "django-admin.py makemessages -a" from within your filebrowser-directory.
   * *Don't forget to update the copyright-information at the top of your .po-file.*
 
-Note: You have to add these lines manually at line 19 of your translation file in order to translate the file-types (the code below is taken from the german-translation):
-
-{{{
-# extension translation
-msgid "Folder"
-msgstr "Ordner"
-msgid "Image"
-msgstr "Bild"
-msgid "Document"
-msgstr "Dokument"
-msgid "Code"
-msgstr "Code"
-msgid "Sound"
-msgstr "Sound"
-}}}
-
-
 = Updates =
 
 Updates of translation-strings are listed below.
 
-*2009-06-15*: changed the line "#: extension translation" to "# extension translation".
+*2009-11-12*: with the official release of !FileBrowser 3, some translation-strings have changed. Please Update your translation-files.
