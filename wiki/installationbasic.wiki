@@ -1,4 +1,3 @@
-#labels Featured
 =Basic Installation=
 
   # *Install the !FileBrowser*
