@@ -1,4 +1,3 @@
-#labels Featured
 This is a list of frequently asked questions. If your question is not being answered, please open a ticket. 
 
 = FAQ =
