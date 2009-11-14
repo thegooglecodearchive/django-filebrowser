@@ -1,4 +1,3 @@
-#labels Featured
 =Using the !FileBrowser with TinyMCE=
 
 You can also replace the TinyMCE Image/File Manager with the !FileBrowser.
