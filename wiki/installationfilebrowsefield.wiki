@@ -1,4 +1,3 @@
-#labels Featured
 =Using the !FileBrowseField=
 
 The !FileBrowseField is a Model field (see http://docs.djangoproject.com/en/dev/ref/models/fields/#field-types for other field types) used to select a File/Document/Image/Folder from your Media Server.
