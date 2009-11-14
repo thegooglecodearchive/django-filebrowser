@@ -1,0 +1,26 @@
+  * [http://code.google.com/p/django-filebrowser/ Home]
+  * Screenshots
+    * [screenshots Screenshots]
+  * Information
+    * [FAQ FAQ]
+    * [Features Features]
+    * [releasenotes Release Notes]
+    * [updates Updates]
+    * [djangoissues Django issues]
+    * [Reviews Reviews]
+  * Installation
+    * [Installation Installation]
+    * [setup Setup]
+    * [settings Available Settings]
+  * Documentation
+    * [modeladminoptions Model Admin]
+    * [inlinemodeladminoptions Inline Model Admin]
+    * [relatedlookups Related Lookups]
+    * [generic Generic Relationships]
+    * [positionfield Positionfield]
+    * [tinymce Using TinyMCE]
+    * [navigation Customizing Navigation Area]
+    * [customizingindex Customizing the Admin Index Page]
+    * [extendingtemplates Templates]
+  * Sandbox
+    * [SandBox Sandbox]
