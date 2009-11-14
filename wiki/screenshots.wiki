@@ -1,4 +1,3 @@
-#labels Featured
 ==Main Admin Site==
 
 Admin Index Site with !FileBrowser in the Navigation-Area.
