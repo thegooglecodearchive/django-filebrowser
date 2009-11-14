@@ -1,4 +1,3 @@
-#labels Featured
 = Available Settings =
 
 All Settings can be defined in your projects settings-file or the !FileBrowsers settings-file (settings.py). When using the projects settings-file, you have to use the prefix "FILEBROWSER" for every setting (e.g. FILEBROWSER_MEDIA_URL instead of MEDIA_URL).
