@@ -6,7 +6,7 @@
 svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ filebrowser
 }}}
   # *Copy/Symlink Media*
-    Copy the folder /media somewhere to your media-directory and change URL_FILEBROWSER_MEDIA (in fb_settings.py) accordingly.<br>
+    Copy the folder /media somewhere to your media-directory and change URL_FILEBROWSER_MEDIA accordingly.<br>
     Alternatively, you may want to use a symlink from your media-directory.
   # *Add filebrowser to your INSTALLED APPS.*
     Open your projects settings-file (settings.py) and add the filebrowser to your INSTALLED APPS. 
