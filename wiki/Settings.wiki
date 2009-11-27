@@ -105,3 +105,11 @@ CONVERT_FILENAME = getattr(settings, "FILEBROWSER_CONVERT_FILENAME", True)
 {{{
 LIST_PER_PAGE = getattr(settings, "FILEBROWSER_LIST_PER_PAGE", 50)
 }}}
+*DEFAULT_SORTING_BY:* set the default sorting attribute.
+{{{
+DEFAULT_SORTING_BY = getattr(settings, "FILEBROWSER_DEFAULT_SORTING_BY", "date")
+}}}
+*DEFAULT_SORTING_ORDER:* asc, desc.
+{{{
+DEFAULT_SORTING_ORDER = getattr(settings, "FILEBROWSER_DEFAULT_SORTING_ORDER", "desc")
+}}}
