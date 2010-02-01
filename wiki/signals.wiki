@@ -51,3 +51,6 @@ def post_upload_callback(sender, **kwargs):
     print "Extension:", kwargs['file'].extension
 filebrowser_post_upload.connect(post_upload_callback)
 }}}
+
+Another example is here (it´s a contribution by a user, so I haven´t checked the code):
+http://www.djangosnippets.org/snippets/1893/
