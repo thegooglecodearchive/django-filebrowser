@@ -23,4 +23,24 @@ svn checkout http://django-filebrowser.googlecode.com/svn/trunk/filebrowser/ fil
 
 ----
 *IMPORTANT: About 90% of the problems installing the filebrowser are related to wrong URLS and/or PATHS. So, please read through [http://code.google.com/p/django-filebrowser/wiki/Settings Available Settings] and check everything with either _URL_ or _PATH_ carefully (especially when using TinyMCE).*
+
+=== Check yourself before you...create an issue ===
+
+good way to do this (by alper.cugun):
+
+{{{
+$ python manage.py shell
+>>> import django.conf.settings
+>>> import filebrowser.settings
+}}}
+
+Now for all the relevant settings in filebrowser (and maybe also some in django), call them up in the prompt to see what they end up like:
+
+{{{
+>>> filebrowser.settings.DEFAULT_URL_TINYMCE
+'/media/tinymce/jscripts/tiny_mce/'
+}}}
+
+And check for both URLs and paths if those are reachable existing locations and that they 
+actually contain the things they are supposed to.
 ----
