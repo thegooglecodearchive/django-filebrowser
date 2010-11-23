@@ -71,14 +71,10 @@ def browse(request):
     
     if q:
         m_root = os.path.normpath(MEDIA_ROOT)
-        dirs = []
-        for root, _subdirs, filenames in os.walk(abs_path):
-            dirs_2 = []
-            items = _subdirs + filenames
-            for f in items:
-                dirs_2.append((os.path.normpath(root)[len(m_root)+1:], f))
-            # append result of every iteration to dirs
-            dirs.append(dirs_2)
+        dirs = [
+            [(os.path.normpath(root)[len(m_root)+1:], f) for f in filenames]
+            for root, _subdirs, filenames in os.walk(abs_path)
+        ]
         dir_list = itertools.chain(*dirs)
     else:
         root = os.path.join(DIRECTORY, path)

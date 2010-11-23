@@ -30,7 +30,6 @@ class FileObject(object):
     """
     
     def __init__(self, path):
-        path = force_unicode(path)
         self.path = path
         self.url_rel = path.replace("\\","/")
         self.head = os.path.split(path)[0]
@@ -46,7 +45,7 @@ class FileObject(object):
         """
         Filesize.
         """
-        path = self.path
+        path = force_unicode(self.path)
         if os.path.isfile(os.path.join(MEDIA_ROOT, path)) or os.path.isdir(os.path.join(MEDIA_ROOT, path)):
             return os.path.getsize(os.path.join(MEDIA_ROOT, path))
         return ""
@@ -147,11 +146,6 @@ class FileObject(object):
         directory_re = re.compile(r'^(%s)' % (DIRECTORY.rstrip('/')))
         return u"%s/" % directory_re.sub('', self.head)
     folder = property(_folder)
-    
-    def _folder_for_link(self):
-        directory_re = re.compile(r'^(%s)' % (DIRECTORY.rstrip('/')))
-        return u"%s" % directory_re.sub('', self.head)[1:]
-    folder_for_link = property(_folder_for_link)
     
     def _dimensions(self):
         """
