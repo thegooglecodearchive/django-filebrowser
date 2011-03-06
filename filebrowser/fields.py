@@ -1,9 +1,9 @@
 # coding: utf-8
 
-# imports
+# PYTHON IMPORTS
 import os
 
-# django imports
+# DJANGO IMPORTS
 from django.db import models
 from django import forms
 from django.forms.widgets import Input
@@ -12,7 +12,7 @@ from django.utils.encoding import force_unicode
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext_lazy as _
 
-# filebrowser imports
+# FILEBROWSER IMPORTS
 from filebrowser.settings import *
 from filebrowser.base import FileObject
 from filebrowser.functions import url_to_path
@@ -25,13 +25,15 @@ class FileBrowseWidget(Input):
         js = (os.path.join(URL_FILEBROWSER_MEDIA, 'js/AddFileBrowser.js'), )
     
     def __init__(self, attrs=None):
+        super(FileBrowseWidget, self).__init__(attrs)
         self.directory = attrs.get('directory', '')
         self.extensions = attrs.get('extensions', '')
         self.format = attrs.get('format', '')
-        if attrs is not None:
-            self.attrs = attrs.copy()
-        else:
-            self.attrs = {}
+        # if attrs is not None:
+        #     self.attrs = attrs.copy()
+        # else:
+        #     self.attrs = {}
+        #super(FileBrowseWidget, self).__init__(attrs)
     
     def render(self, name, value, attrs=None):
         if value is None:
@@ -43,24 +45,21 @@ class FileBrowseWidget(Input):
         final_attrs['format'] = self.format
         final_attrs['ADMIN_THUMBNAIL'] = ADMIN_THUMBNAIL
         final_attrs['DEBUG'] = DEBUG
-        if value != "":
-            try:
-                final_attrs['directory'] = os.path.split(value.path_relative_directory)[0]
-            except:
-                pass
+        # if value != "":
+        #     try:
+        #         final_attrs['directory'] = os.path.split(value.path_relative_directory)[0]
+        #     except:
+        #         pass
         return render_to_string("filebrowser/custom_field.html", locals())
 
 
 class FileBrowseFormField(forms.CharField):
-    widget = FileBrowseWidget
     
     default_error_messages = {
         'extension': _(u'Extension %(ext)s is not allowed. Only %(allowed)s is allowed.'),
     }
     
-    def __init__(self, max_length=None, min_length=None,
-                 directory=None, extensions=None, format=None,
-                 *args, **kwargs):
+    def __init__(self, max_length=None, min_length=None, directory=None, extensions=None, format=None, *args, **kwargs):
         self.max_length, self.min_length = max_length, min_length
         self.directory = directory
         self.extensions = extensions
@@ -79,7 +78,8 @@ class FileBrowseFormField(forms.CharField):
         return value
 
 
-class FileBrowseField(Field):
+class FileBrowseField(CharField):
+    description = "FileBrowseField"
     __metaclass__ = models.SubfieldBase
     
     def __init__(self, *args, **kwargs):
@@ -91,19 +91,7 @@ class FileBrowseField(Field):
     def to_python(self, value):
         if not value or isinstance(value, FileObject):
             return value
-        return FileObject(url_to_path(value))
-    
-    def get_db_prep_value(self, value, connection, prepared=False):
-        if value is None:
-            return None
-        return unicode(value)
-        
-    
-    def get_manipulator_field_objs(self):
-        return [oldforms.TextField]
-    
-    def get_internal_type(self):
-        return "CharField"
+        return FileObject(value, relative=True)
     
     def formfield(self, **kwargs):
         attrs = {}
@@ -117,7 +105,7 @@ class FileBrowseField(Field):
             'extensions': self.extensions,
             'format': self.format
         }
-        defaults.update(kwargs)
+        #defaults.update(kwargs)
         return super(FileBrowseField, self).formfield(**defaults)
 
 try:

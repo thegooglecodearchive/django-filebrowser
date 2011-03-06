@@ -19,35 +19,29 @@ except ImportError:
 # Set to True in order to see the FileObject when Browsing.
 DEBUG = getattr(settings, "FILEBROWSER_DEBUG", False)
 
+# PATH AND URL SETTINGS
 # Main Media Settings
 MEDIA_ROOT = getattr(settings, "FILEBROWSER_MEDIA_ROOT", settings.MEDIA_ROOT)
 MEDIA_URL = getattr(settings, "FILEBROWSER_MEDIA_URL", settings.MEDIA_URL)
-
 # Main FileBrowser Directory. This has to be a directory within MEDIA_ROOT.
 # Leave empty in order to browse all files under MEDIA_ROOT.
 # DO NOT USE A SLASH AT THE BEGINNING, DO NOT FORGET THE TRAILING SLASH AT THE END.
 DIRECTORY = getattr(settings, "FILEBROWSER_DIRECTORY", 'uploads/')
-
 # The URL/PATH to your filebrowser media-files.
 URL_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_URL_FILEBROWSER_MEDIA", "/media/filebrowser/")
 PATH_FILEBROWSER_MEDIA = getattr(settings, "FILEBROWSER_PATH_FILEBROWSER_MEDIA", os.path.join(settings.MEDIA_ROOT, 'filebrowser/'))
-
 # The URL/PATH to your TinyMCE Installation.
 URL_TINYMCE = getattr(settings, "FILEBROWSER_URL_TINYMCE", DEFAULT_URL_TINYMCE)
 PATH_TINYMCE = getattr(settings, "FILEBROWSER_PATH_TINYMCE", DEFAULT_PATH_TINYMCE)
 
+# EXTENSIONS AND FORMATS
 # Allowed Extensions for File Upload. Lower case is important.
-# Please be aware that there are Icons for the default extension settings.
-# Therefore, if you add a category (e.g. "Misc"), you won't get an icon.
 EXTENSIONS = getattr(settings, "FILEBROWSER_EXTENSIONS", {
-    'Folder': [''],
     'Image': ['.jpg','.jpeg','.gif','.png','.tif','.tiff'],
     'Video': ['.mov','.wmv','.mpeg','.mpg','.avi','.rm'],
     'Document': ['.pdf','.doc','.rtf','.txt','.xls','.csv'],
-    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p'],
-    'Code': ['.html','.py','.js','.css']
+    'Audio': ['.mp3','.mp4','.wav','.aiff','.midi','.m4p']
 })
-
 # Define different formats for allowed selections.
 # This has to be a subset of EXTENSIONS.
 SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
@@ -61,6 +55,7 @@ SELECT_FORMATS = getattr(settings, "FILEBROWSER_SELECT_FORMATS", {
     'media': ['Video','Sound'],
 })
 
+# VERSIONS
 # Directory to Save Image Versions (and Thumbnails). Relative to MEDIA_ROOT.
 # If no directory is given, versions are stored within the Image directory.
 # VERSION URL: VERSIONS_BASEDIR/original_path/originalfilename_versionsuffix.extension
@@ -81,14 +76,12 @@ VERSION_QUALITY = getattr(settings, 'FILEBROWSER_VERSION_QUALITY', 90)
 ADMIN_VERSIONS = getattr(settings, 'FILEBROWSER_ADMIN_VERSIONS', ['thumbnail','small', 'medium','big'])
 # Which Version should be used as Admin-thumbnail.
 ADMIN_THUMBNAIL = getattr(settings, 'FILEBROWSER_ADMIN_THUMBNAIL', 'fb_thumb')
-# Preview Version
-PREVIEW_VERSION = getattr(settings, 'FILEBROWSER_PREVIEW_VERSION', 'small')
 
 # EXTRA SETTINGS
 # True to save the URL including MEDIA_URL to your model fields
 # or False (default) to save path relative to MEDIA_URL.
 # Note: Full URL does not necessarily means absolute URL.
-SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", True)
+SAVE_FULL_URL = getattr(settings, "FILEBROWSER_SAVE_FULL_URL", False)
 # If set to True, the FileBrowser will not try to import a mis-installed PIL.
 STRICT_PIL = getattr(settings, 'FILEBROWSER_STRICT_PIL', False)
 # PIL's Error "Suspension not allowed here" work around:
@@ -115,6 +108,8 @@ DEFAULT_SORTING_BY = getattr(settings, "FILEBROWSER_DEFAULT_SORTING_BY", "date")
 DEFAULT_SORTING_ORDER = getattr(settings, "FILEBROWSER_DEFAULT_SORTING_ORDER", "desc")
 # regex to clean dir names before creation
 FOLDER_REGEX = getattr(settings, "FILEBROWSER_FOLDER_REGEX", r'^[\w._/-]+$')
+# Traverse directories when searching
+SEARCH_TRAVERSE = getattr(settings, "FILEBROWSER_SEARCH_TRAVERSE", False)
 
 # EXTRA TRANSLATION STRINGS
 # The following strings are not availabe within views or templates
@@ -124,5 +119,3 @@ _('Video')
 _('Document')
 _('Audio')
 _('Code')
-
-

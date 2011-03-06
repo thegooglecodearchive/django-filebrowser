@@ -71,7 +71,7 @@ msgstr "Code"
 #: views.py:56 views.py:166 views.py:221 views.py:318 views.py:400
 #: views.py:461
 msgid "The requested Folder does not exist."
-msgstr "Der Ordner existiert bereits."
+msgstr "Der Ordner existiert nicht."
 
 #: views.py:60
 msgid "Error finding Upload-Folder (MEDIA_ROOT + FILEBROWSER_DIRECTORY). Maybe it does not exist?"

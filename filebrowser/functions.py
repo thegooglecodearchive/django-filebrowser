@@ -147,9 +147,8 @@ def url_join(*args):
 
 def get_path(path):
     """
-    Get Path.
+    Get path.
     """
-    
     if path.startswith('.') or os.path.isabs(path) or not os.path.isdir(os.path.join(MEDIA_ROOT, DIRECTORY, path)):
         return None
     return path
@@ -157,11 +156,9 @@ def get_path(path):
 
 def get_file(path, filename):
     """
-    Get File.
+    Get file (or folder).
     """
-    
     converted_path = smart_str(os.path.join(MEDIA_ROOT, DIRECTORY, path, filename))
-    
     if not os.path.isfile(converted_path) and not os.path.isdir(converted_path):
         return None
     return filename
@@ -223,11 +220,12 @@ def get_settings_var():
     settings_var['VERSIONS'] = VERSIONS
     settings_var['ADMIN_VERSIONS'] = ADMIN_VERSIONS
     settings_var['ADMIN_THUMBNAIL'] = ADMIN_THUMBNAIL
-    settings_var['PREVIEW_VERSION'] = PREVIEW_VERSION
     # FileBrowser Options
     settings_var['MAX_UPLOAD_SIZE'] = MAX_UPLOAD_SIZE
     # Convert Filenames
     settings_var['CONVERT_FILENAME'] = CONVERT_FILENAME
+    # Traverse directories when searching
+    settings_var['SEARCH_TRAVERSE'] = SEARCH_TRAVERSE
     return settings_var
 
 
@@ -347,30 +345,6 @@ def scale_and_crop(im, width, height, opts):
         if ex or ey:
             im = im.crop((int(ex), int(ey), int(x-ex), int(y-ey)))
     return im
-    
-    # if 'crop' in opts:
-    #     if 'top_left' in opts:
-    #         #draw cropping box from upper left corner of image
-    #         box = (0, 0, int(min(x, xr)), int(min(y, yr)))
-    #         im = im.resize((int(x), int(y)), resample=Image.ANTIALIAS).crop(box)
-    #     elif 'top_right' in opts:
-    #         #draw cropping box from upper right corner of image
-    #         box = (int(x-min(x, xr)), 0, int(x), int(min(y, yr)))
-    #         im = im.resize((int(x), int(y)), resample=Image.ANTIALIAS).crop(box)
-    #     elif 'bottom_left' in opts:
-    #         #draw cropping box from lower left corner of image
-    #         box = (0, int(y-min(y, yr)), int(xr), int(y))
-    #         im = im.resize((int(x), int(y)), resample=Image.ANTIALIAS).crop(box)
-    #     elif 'bottom_right' in opts:
-    #         #draw cropping box from lower right corner of image
-    #         (int(x-min(x, xr)), int(y-min(y, yr)), int(x), int(y))
-    #         im = im.resize((int(x), int(y)), resample=Image.ANTIALIAS).crop(box)
-    #     else:
-    #         ex, ey = (x-min(x, xr))/2, (y-min(y, yr))/2
-    #         if ex or ey:
-    #             box = (int(ex), int(ey), int(x-ex), int(y-ey))
-    #             im = im.resize((int(x), int(y)), resample=Image.ANTIALIAS).crop(box)
-    # return im
     
 scale_and_crop.valid_options = ('crop', 'upscale')
 
